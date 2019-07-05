@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?vwoxa4');
+	src: url('../fonts/icomoon.eot?vwoxa4#iefix') format('embedded-opentype'),
+		 url('../fonts/icomoon.ttf?vwoxa4') format('truetype'),
+		 url('../fonts/icomoon.woff?vwoxa4') format('woff'),
+		 url('../fonts/icomoon.svg?vwoxa4#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: "icomoon";
+		src: url("../fonts/icomoon.svg?vwoxa4#icomoon") format("svg");
+	}
+}
+.icon:before {
+	display: inline-block;
+	font-family: "icomoon";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+.icon-right:before {
+	content: "\e903";
+}
+.icon-instagram:before {
+	content: "\e902";
+}
+.icon-youtube:before {
+	content: "\e900";
+}
+.icon-hamburger:before {
+	content: "\f117";
+}
+.icon-home:before {
+	content: "\f116";
+}
+.icon-close:before {
+	content: "\f108";
+}
+.icon-play:before {
+	content: "\f125";
+}
+.icon-facebook:before {
+	content: "\e901";
+}

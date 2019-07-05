@@ -1,0 +1,541 @@
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap");
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
+a {
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+header::before {
+  content: '';
+  display: block;
+}
+
+ul.list-reset, ol.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+}
+
+.sr-only {
+  position: absolute !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+}
+
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, 'Noto Sans TC', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  a {
+    transition: color .2s, background-color .2s;
+  }
+}
+
+img {
+  display: block;
+}
+
+.clearfix, .clearfix::before, .clearfix::after {
+  display: table;
+  clear: both;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?vwoxa4");
+  src: url("../fonts/icomoon.eot?vwoxa4#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?vwoxa4") format("truetype"), url("../fonts/icomoon.woff?vwoxa4") format("woff"), url("../fonts/icomoon.svg?vwoxa4#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.svg?vwoxa4#icomoon") format("svg");
+  }
+}
+.icon:before {
+  display: inline-block;
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-right:before {
+  content: "\e903";
+}
+
+.icon-instagram:before {
+  content: "\e902";
+}
+
+.icon-youtube:before {
+  content: "\e900";
+}
+
+.icon-hamburger:before {
+  content: "\f117";
+}
+
+.icon-home:before {
+  content: "\f116";
+}
+
+.icon-close:before {
+  content: "\f108";
+}
+
+.icon-play:before {
+  content: "\f125";
+}
+
+.icon-facebook:before {
+  content: "\e901";
+}
+
+.container {
+  width: 100%;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mtb0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.embed {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+.embed--16by9 {
+  padding-bottom: 56.25%;
+}
+.embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn--90 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 90px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+nav a {
+  display: block;
+  color: #879596;
+}
+nav .container .flex {
+  font-size: 30px;
+  align-items: center;
+}
+nav .container > .flex {
+  justify-content: space-between;
+}
+nav .container .menu {
+  width: 50%;
+  justify-content: center;
+}
+nav .container .menu li {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+nav .container .menu li a {
+  padding: 20px 30px;
+}
+nav .container .btn {
+  margin-left: 110px;
+}
+
+header {
+  position: relative;
+  padding-top: 100px;
+  height: 100vh;
+}
+header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0e12;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  z-index: 2;
+}
+header video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+}
+header > .container {
+  position: relative;
+  z-index: 3;
+}
+header > .container > .flex {
+  justify-content: center;
+}
+header .content {
+  width: 600px;
+}
+header .content .icon-play {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-size: 54px;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+  cursor: pointer;
+}
+header .content .icon-play:hover {
+  -moz-transform: scale(1.66667, 1.66667);
+  -ms-transform: scale(1.66667, 1.66667);
+  -webkit-transform: scale(1.66667, 1.66667);
+  transform: scale(1.66667, 1.66667);
+}
+header .content .app-list {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  align-items: center;
+  justify-content: space-between;
+}
+header .content .app-list li a {
+  display: block;
+}
+header .content .app-list li a img {
+  display: block;
+}
+header .content .app-list li:not(.app-logo) img {
+  height: 85px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+header .content .app-list li.app-logo a {
+  display: block;
+  padding: 10px 25px;
+  border: 1px solid #fff;
+}
+header .content .app-list li.app-logo a:hover {
+  background-color: #000;
+}
+header .content .app-list li.app-logo img {
+  height: 42px;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  left: 0;
+  z-index: 3;
+}
+.footer a {
+  display: block;
+  color: #879596;
+}
+.footer .container > .flex {
+  justify-content: space-between;
+}
+.footer .container > .flex p {
+  color: #879596;
+  font-size: 14px;
+}
+.footer .container .sns li a {
+  padding: 20px;
+  font-size: 36px;
+}
+
+.black {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  z-index: 10;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.lightbox .icon {
+  position: absolute;
+  top: 0;
+  right: -74px;
+  color: #879596;
+  font-size: 54px;
+  cursor: pointer;
+}
+.lightbox--video .embed--border {
+  border: 1px solid #fff;
+}
+.lightbox__wrap {
+  position: relative;
+  width: 1280px;
+}
+
+/*# sourceMappingURL=main.css.map */

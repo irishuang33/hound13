@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import 'normalize-version';
+@import 'normalize/html5';
+@import 'normalize/base';
+@import 'normalize/links';
+// @import 'normalize/typography';
+@import 'normalize/embeds';
+@import 'normalize/groups';
+@import 'normalize/forms';
+@import 'normalize/tables';
+@import "Compass";
+@import "breakpoint";
+%before-after {
+	content: '';
+	display: block;
+}
+@mixin text-fill-color($color) {
+	-moz-text-fill-color: $color;
+	-ms-text-fill-color: $color;
+	-webkit-text-fill-color: $color;
+	text-fill-color: $color;
+}
+%list-reset {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+%ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+ul, ol {
+	padding-left: 1.5em;
+	&.list-reset {
+		@extend %list-reset;
+	}
+}
