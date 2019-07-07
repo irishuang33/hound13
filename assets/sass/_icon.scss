@@ -28,27 +28,39 @@
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
-.icon-right:before {
-	content: "\e903";
+.icon-slider-left:before {
+	content: "\e906";
 }
-.icon-instagram:before {
-	content: "\e902";
+.icon-slider-right:before {
+	content: "\e907";
 }
-.icon-youtube:before {
+.icon-down:before {
+	content: "\e905";
+}
+.icon-twitter:before {
 	content: "\e900";
 }
-.icon-hamburger:before {
-	content: "\f117";
+.icon-youtube:before {
+	content: "\e901";
 }
-.icon-home:before {
-	content: "\f116";
+.icon-facebook:before {
+	content: "\e902";
+}
+.icon-instagram:before {
+	content: "\e903";
+}
+.icon-right:before {
+	content: "\e904";
 }
 .icon-close:before {
 	content: "\f108";
 }
+.icon-home:before {
+	content: "\f116";
+}
+.icon-hamburger:before {
+	content: "\f117";
+}
 .icon-play:before {
 	content: "\f125";
-}
-.icon-facebook:before {
-	content: "\e901";
 }
