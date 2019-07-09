@@ -26,7 +26,7 @@ $(function(){
 	$(".storage__open").on("click", function () {
 		$(this).parent().toggleClass("active");
 	});
-
+	// $(".slider__image").
 	// slides
 	$(".slider").each(function () {
 		var $slider = $(this),
