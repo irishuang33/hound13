@@ -1782,6 +1782,7 @@ footer .container .sns li a:hover {
 .slider-fade > .slider-wrap > .slider-item.active {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
+  z-index: 5;
 }
 .slider-fade > .slider-wrap > .slider-item.active .slider-body {
   -moz-animation: fadeLeftIn 1s 1 forwards alternate;
