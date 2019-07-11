@@ -83,23 +83,27 @@
 			<div class="storage__open">
 				<i class="icon icon-right"></i>
 			</div>
-			<div class="storage__content">
-				<ul class="list-reset">
-					<li>
+			<div class="storage__content slider slider-mobile">
+				<ul class="slider-wrap list-reset">
+					<li class="slider-item">
 						<a href="#!" target="_blank">
 							<img src="assets/img/banner01.png" alt="">
 						</a>
 					</li>
-					<li>
+					<li class="slider-item">
 						<a href="#!" target="_blank">
 							<img src="assets/img/banner02.png" alt="">
 						</a>
 					</li>
-					<li>
+					<li class="slider-item">
 						<a href="#!" target="_blank">
 							<img src="assets/img/banner03.png" alt="">
 						</a>
 					</li>
+				</ul>
+				<ul class="slider-navi list-reset mobile">
+					<li class="slider-navi--prev"><i class="icon icon-slider-left"></i></li>
+					<li class="slider-navi--next"><i class="icon icon-slider-right"></i></li>
 				</ul>
 			</div>
 		</div>
@@ -114,15 +118,14 @@
 								<li>武器</li>
 							</ul>
 						</li>
-						<li>主武器</li>
-						<li>輔助武器</li>
+						<li class="eq-main">主武器</li>
+						<li class="eq-sub">輔助武器</li>
 					</ul>
-					<div class="slider-wrap" style="left: -5760px">
+					<div class="slider-wrap">
 						<div class="slider-item">
-							<div class="flex card-group">
+							<div class="flex card-group desktop">
 								<div class="card-item">
 									<img class="normal" src="assets/img/monster-normal.png" alt="">
-									<span></span>
 									<img class="hover" src="assets/img/monster-hover.png" alt="">
 									<span class="sr-only">魔物 Monster</span>
 								</div>
@@ -135,6 +138,24 @@
 									<img class="normal" src="assets/img/equipment-normal.png" alt="">
 									<img class="hover" src="assets/img/equipment-hover.png" alt="">
 									<span class="sr-only">武器 equipment</span>
+								</div>
+							</div>
+							<div class="flex card-group mobile">
+								<div class="card-item">
+									<img class="normal" src="assets/img/monster-mobile.png" alt="">
+									<span class="sr-only">魔物 Monster</span>
+								</div>
+								<div class="card-item">
+									<img class="normal" src="assets/img/fellow-mobile.png" alt="">
+									<span class="sr-only">副官 Fellow</span>
+								</div>
+								<div class="card-item">
+									<img class="normal" src="assets/img/equipment-main-mobile.png" alt="">
+									<span class="sr-only">主武器 equipment</span>
+								</div>
+								<div class="card-item">
+									<img class="normal" src="assets/img/equipment-sub-mobile.png" alt="">
+									<span class="sr-only">輔助武器 equipment</span>
 								</div>
 							</div>
 						</div>
@@ -362,6 +383,7 @@
 								<div class="slider slider-fade slider-equipment">
 									<div class="slider-wrap">
 										<div class="slider-item active">
+											<h3 class="mobile">主武器</h3>
 											<div class="tab-group">
 												<ul class="tab-navi tab-navi--main list-reset">
 													<li class="active"></li>
@@ -386,7 +408,7 @@
 																	據說達到最高境界的人能用這把劍斬斷風。
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-11.png" alt="">
+																	<img class="recommend-main" src="assets/img/recommend-group-11.png" alt="">
 																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
 																		<img src="assets/img/imgMovie01.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
@@ -407,7 +429,7 @@
 																	英雄王托雷多被冊封為王太子時先王賜予的劍，是歷代潘特拉王代代相傳的傳家之寶。
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-12.png" alt="">
+																	<img class="recommend-main" src="assets/img/recommend-group-12.png" alt="">
 																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
 																		<img src="assets/img/imgMovie02.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
@@ -428,7 +450,7 @@
 																	英雄王托雷多被冊封為王太子時先王賜予的劍，是歷代潘特拉王代代相傳的傳家之寶。
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-13.png" alt="">
+																	<img class="recommend-main" src="assets/img/recommend-group-13.png" alt="">
 																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
 																		<img src="assets/img/imgMovie03.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
@@ -449,7 +471,7 @@
 																	英雄王托雷多單槍匹馬突破闇影峽谷時使用 的武器，據說他只花了不到半天的時間， 就突破了這個充滿魔物的
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-14.png" alt="">
+																	<img class="recommend-main" src="assets/img/recommend-group-14.png" alt="">
 																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
 																		<img src="assets/img/imgMovie04.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
@@ -470,7 +492,7 @@
 																	為潘特拉的突擊隊長巴爾多量身訂做的戰錘，面對碎骨者，任何一個魔物都無法避免骨頭碎裂的命運。
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-15.png" alt="">
+																	<img class="recommend-main" src="assets/img/recommend-group-15.png" alt="">
 																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
 																		<img src="assets/img/imgMovie05.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
@@ -494,7 +516,7 @@
 																	利用熔岩般的刀刃焚燒敵人，使其變成灰燼。
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-16.png" alt="">
+																	<img class="recommend-main" src="assets/img/recommend-group-16.png" alt="">
 																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
 																		<img src="assets/img/imgMovie06.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
@@ -508,6 +530,7 @@
 											</div>
 										</div>
 										<div class="slider-item">
+											<h3 class="mobile">輔助武器</h3>
 											<div class="tab-group">
 												<ul class="tab-navi tab-navi--sub list-reset">
 													<li class="active"></li>
@@ -530,7 +553,7 @@
 																	菲力帕初次出陣時配備它橫掃敵陣的知名脛甲體格小的人使用也能造成龐大的衝擊
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-21.png" alt="">
+																	<img class="recommend-sub" src="assets/img/recommend-group-21.png" alt="">
 																	<p>※ 推薦組合</p>
 																</div>
 															</div>
@@ -549,7 +572,7 @@
 																	潘特拉的十二騎士之一鋼鐵心臟羅根愛用的脛甲帶著沉重金屬重量的踢擊輕易就把魔物踢向空中。
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-22.png" alt="">
+																	<img class="recommend-sub" src="assets/img/recommend-group-22.png" alt="">
 																	<p>※ 推薦組合</p>
 																</div>
 															</div>
@@ -568,7 +591,7 @@
 																	羅敦之王親自賜予先鋒部隊指揮官的防盾蘊含能有效分散衝擊的羅敦工匠技術的精華
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-23.png" alt="">
+																	<img class="recommend-sub" src="assets/img/recommend-group-23.png" alt="">
 																	<p>※ 推薦組合</p>
 																</div>
 															</div>
@@ -587,7 +610,7 @@
 																	指揮蘭帕司第4次防禦戰的聖殿騎士鐵壁的帕拉泰昂使用過的防盾蘊含女神之子拉黎卡對於生存
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-24.png" alt="">
+																	<img class="recommend-sub" src="assets/img/recommend-group-24.png" alt="">
 																	<p>※ 推薦組合</p>
 																</div>
 															</div>
@@ -606,7 +629,7 @@
 																	潘特拉的十二騎士之一魔彈射手基戴亞使用過的手持加農砲利用配合二十四種致命毒融化且
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-25.png" alt="">
+																	<img class="recommend-sub" src="assets/img/recommend-group-25.png" alt="">
 																	<p>※ 推薦組合</p>
 																</div>
 															</div>
@@ -625,7 +648,7 @@
 																	利用在冰山脈地層發掘的冰龍骨頭製成的手持加農砲會發射連火焰都能冰凍的極度寒氣。
 																</p>
 																<div class="recommend-group">
-																	<img src="assets/img/recommend-group-26.png" alt="">
+																	<img class="recommend-sub" src="assets/img/recommend-group-26.png" alt="">
 																	<p>※ 推薦組合</p>
 																</div>
 															</div>

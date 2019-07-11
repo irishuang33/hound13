@@ -322,7 +322,7 @@ nav {
 }
 header {
 	position: relative;
-	padding-top: 10px;
+	// padding-top: 10px;
 	min-height: 100vh;
 	overflow: hidden;
 	z-index: 3;
@@ -381,6 +381,9 @@ header {
 			margin-left: 16px;
 			order: 1;
 		}
+		@include breakpoint(max-width 414px) {
+			margin-top: 5px;
+		}
 		@include breakpoint(1024px) {
 			position: absolute;
 			top: 50%;
@@ -397,8 +400,11 @@ header {
 					display: block;
 				}
 				img {
-					width: 215px;
 					display: block;
+					width: 150px;
+					@include breakpoint(414px) {
+						width: 215px;
+					}
 					@include breakpoint(1024px) {
 						width: 242px;
 					}
@@ -417,9 +423,14 @@ header {
 		&__mask {
 			position: absolute;
 			top: 50%;
-			margin-top: -76px;
-			margin-left: -32px;
-			width: 217px;
+			margin-top: -53px;
+			margin-left: -22px;
+			width: 152px;
+			@include breakpoint(414px) {
+				margin-top: -76px;
+				margin-left: -32px;
+				width: 217px;
+			}
 			@include breakpoint(1024px) {
 				margin-top: -51px;
 				margin-left: -10px;
@@ -449,7 +460,7 @@ header {
 			li {
 				display: none;
 				color: transparent !important;
-				font-size: 18px;
+				font-size: 16px;
 				font-weight: 600;
 				letter-spacing: 0.29em;
 				background-color: #36b1c0;
@@ -457,6 +468,9 @@ header {
 				@include background-image(linear-gradient(top, #36b1c0 0%,#ffffff 100%));
 				@include background-clip(text);
 				@include background-size(cover);
+				@include breakpoint(414px) {
+					font-size: 18px;
+				}
 				@include breakpoint(1366px) {
 					font-size: 24px;
 				}
@@ -467,7 +481,10 @@ header {
 					font-size: 34px;
 				}
 				strong {
-					font-size: 35px;
+					font-size: 27px;
+					@include breakpoint(414px) {
+						font-size: 35px;
+					}
 					@include breakpoint(1366px) {
 						font-size: 45px;
 					}
@@ -543,6 +560,12 @@ header {
 				background-color: $black;
 				z-index: 7;
 			}
+			@include breakpoint(max-width 375px) {
+				padding: 0.657em 0;
+			}
+			@include breakpoint(max-width 320px) {
+				padding: 0.5em 0;
+			}
 			li {
 				a {
 					display: block;
@@ -558,6 +581,9 @@ header {
 					img {
 						height: 45px;
 						@include border-radius(10px);
+						@include breakpoint(max-width 375px) {
+							height: 40px;
+						}
 						@include breakpoint(1366px) {
 							height: 60px;
 						}
@@ -592,6 +618,9 @@ header {
 					}
 					img {
 						height: 22px;
+						@include breakpoint(max-width 375px) {
+							height: 18px;
+						}
 						@include breakpoint(1366px) {
 							height: 29px;
 						}
@@ -607,12 +636,19 @@ header {
 		}
 		.coptText {
 			text-align: center;
+			@include breakpoint(max-width 375px) {
+				margin-left: -10%;
+				margin-right: -10%;
+			}
 			p {
 				margin-top: 0.5em;
 				margin-bottom: 0;
 				color: #fff;
-				font-size: 15px;
+				font-size: 13px;
 				letter-spacing: 0.4em;
+				@include breakpoint(414px) {
+					font-size: 15px;
+				}
 				@include breakpoint(1366px) {
 					font-size: 20px;
 				}
@@ -627,13 +663,18 @@ header {
 	}
 }
 .storage {
-	position: fixed;
-	top: 50%;
-	right: 0;
-	z-index: 10;
-	@include translateY(-50%);
+	@include breakpoint(1024px) {
+		position: fixed;
+		top: 50%;
+		right: 0;
+		z-index: 10;
+		@include translateY(-50%);
+	}
 	@include breakpoint(max-width 1023px) {
-		display: none;
+		position: relative;
+		padding-top: 85px;
+		padding-bottom: 85px;
+		background-color: $black;
 	}
 	&__open {
 		position: absolute;
@@ -645,6 +686,9 @@ header {
 		@include translateY(-50%);
 		@include border-radius(10px 0 0 10px);
 		cursor: pointer;
+		@include breakpoint(max-width 1023px) {
+			display: none;
+		}
 		.icon-right {
 			display: block;
 			color: #36b1c0;
@@ -654,17 +698,32 @@ header {
 		}
 	}
 	&__content {
-		width: 0;
-		overflow: hidden;
+		@include breakpoint(1024px) {
+			width: 0;
+			overflow: hidden;
+		}
 		@include transition(all 0.3s);
 		ul {
 			display: flex;
 			flex-direction: column;
+			@include breakpoint(max-width 1023px) {
+				flex-direction: row;
+			}
 			li {
-				margin-top: 10px;
-				margin-bottom: 10px;
+				@include breakpoint(1024px) {
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+				a {
+					display: block;
+				}
 				img {
+					@include breakpoint(max-width 1023px) {
+						width: 100%;
+					}
+					@include breakpoint(1024px) {
 					width: 130px;
+					}
 					@include breakpoint(1366px) {
 						width: 143px;
 					}
@@ -697,13 +756,34 @@ header {
 			}
 		}
 	}
+	.slider-navi {
+		li {
+			position: absolute;
+			top: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 27px;
+			height: 27px;
+			color: #fff;
+			font-size: 12px;
+			cursor: pointer;
+			@include translateY(-50%);
+			&.slider-navi--prev {
+				left: 20px;
+			}
+			&.slider-navi--next {
+				right: 20px;
+			}
+		}
+	}
 }
 section {
 	position: relative;
 	min-height: 100%;
 	height: 100%;
 	background-color: $black;
-	z-index: 4;
+	z-index: 2;
 	> .container-fluid {
 		min-height: 100%;
 		height: 100%;
@@ -718,7 +798,7 @@ footer {
 	width: 100%;
 	bottom: 50px;
 	left: 0;
-	z-index: 4;
+	z-index: 2;
 	@include breakpoint(max-width 1023px) {
 		display: none;
 		position: relative;
@@ -770,6 +850,18 @@ footer {
 }
 .slider {
 	position: relative;
+	&-mobile {
+		overflow: hidden;
+		.slider-wrap {
+			position: relative;
+		}
+		.slider-item {
+			@include breakpoint(max-width 1023px) {
+				padding-left: 72px;
+				padding-right: 72px;
+			}
+		}
+	}
 	&-lr {
 		min-height: 100%;
 		height: 100%;
@@ -788,6 +880,7 @@ footer {
 				position: relative;
 				min-height: 100%;
 				height: 100%;
+				overflow: hidden;
 				@include breakpoint(1024px) {
 					padding-top: 48px;
 					padding-bottom: 48px;
@@ -950,6 +1043,22 @@ footer {
 	}
 	.item-title {
 		position: absolute;
+		@include breakpoint(max-width 1023px) {
+			top: 52px;
+			left: calc(50% + 16px);
+			height: 94px;
+			@include translateX(-50%);
+		}
+		@include breakpoint(max-width 375px) {
+			top: 30px;
+			left: calc(50% + 14.5px);
+			height: 85px;
+		}
+		@include breakpoint(max-width 320px) {
+			top: 40px;
+			left: calc(50% + 12.5px);
+			height: 73px;
+		}
 		@include breakpoint(1024px) {
 			top: 80px;
 			left: 171px;
@@ -975,54 +1084,17 @@ footer {
 			margin-bottom: -84px;
 		}
 	}
-	&-navi {
-		position: absolute;
-		bottom: 2px;
-		z-index: 5;
-		@include breakpoint(1024px) {
-			right: 246px;
-		}
-		@include breakpoint(1366px) {
-			right: 328px;
-		}
-		@include breakpoint(1600px) {
-			right: 384px;
-		}
-		@include breakpoint(1920px) {
-			right: 461px;
-		}
-		li {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: $black;
-			font-size: 21px;
-			cursor: pointer;
-			@include breakpoint(1024px) {
-				width: 27px;
-				height: 27px;
-				font-size: 12px;
-			}
-			@include breakpoint(1366px) {
-				width: 36px;
-				height: 36px;
-				font-size: 15px;
-			}
-			@include breakpoint(1600px) {
-				width: 42px;
-				height: 42px;
-				font-size: 18px;
-			}
-			@include breakpoint(1920px) {
-				width: 50px;
-				height: 50px;
-				font-size: 21px;
-			}
-			&:first-child {
-				background-color: $primary;
-			}
-			&:last-child {
-				background-color: #fff;
+	@include breakpoint(max-width 1023px) {
+		.item-container {
+			height: 100%;
+			> .slider {
+				height: 100%;
+				> .slider-wrap {
+					height: 100%;
+					> .slider-item {
+						height: 100%;
+					}
+				}
 			}
 		}
 	}
@@ -1058,10 +1130,16 @@ footer {
 				@include opacity(0);
 				@include translate(-50%, -50%);
 				@include transition(all 0.3s);
+				@include breakpoint(max-width 1023px) {
+					flex-direction: column;
+				}
 				.slider-body {
 					position: relative;
 					letter-spacing: 0.1em;
 					@include opacity(0);
+					@include breakpoint(max-width 1023px) {
+						order: 2;
+					}
 					@include breakpoint(1024px) {
 						left: 53px;
 						width: 272px;
@@ -1081,6 +1159,9 @@ footer {
 					> p {
 						margin-bottom: 0;
 						color: $primary;
+						@include breakpoint(max-width 1023px) {
+							display: none;
+						}
 						@include breakpoint(1024px) {
 							padding-left: 24px;
 							padding-right: 24px;
@@ -1136,9 +1217,7 @@ footer {
 							margin-right: -30px;
 						}
 						h3 {
-							@include breakpoint(1024px) {
-								font-size: 17px;
-							}
+							font-size: 17px;
 							@include breakpoint(1366px) {
 								font-size: 23px;
 							}
@@ -1150,9 +1229,7 @@ footer {
 							}
 						}
 						p {
-							@include breakpoint(1024px) {
-								font-size: 12px;
-							}
+							font-size: 12px;
 							@include breakpoint(1366px) {
 								font-size: 16px;
 							}
@@ -1170,31 +1247,41 @@ footer {
 				}
 				img {
 					&.slider-img {
-						position: absolute;
 						@include opacity(0);
+						@include breakpoint(max-width 1023px) {
+							width: 135%;
+							margin-bottom: -27.5%;
+						}
+						@include breakpoint(max-width 320px) {
+							width: 130%;
+						}
 						@include breakpoint(1024px) {
+							position: absolute;
 							top: -119px;
 							right: -142px;
-							width: 490px;
+							width: 530px;
 						}
 						@include breakpoint(1366px) {
 							top: -159px;
 							right: -190px;
-							width: 654px;
+							width: 707px;
 						}
 						@include breakpoint(1600px) {
 							top: -186px;
 							right: -223px;
-							width: 766px;
+							width: 828px;
 						}
 						@include breakpoint(1920px) {
 							top: -223px;
 							right: -267px;
-							width: 919px;
+							width: 994px;
 						}
 					}
 					&.decoration {
 						width: 100%;
+						@include breakpoint(max-width 1023px) {
+							display: none;
+						}
 					}
 				}
 				&.active {
@@ -1205,6 +1292,9 @@ footer {
 					}
 					img {
 						&.slider-img {
+							@include breakpoint(max-width 1023px) {
+								@include opacity(1);
+							}
 							@include breakpoint(1024px) {
 								right: -142px;
 								@include animation(fadeRightIn1024 1s 0.25s 1 forwards alternate);
@@ -1223,6 +1313,62 @@ footer {
 							}
 						}
 					}
+				}
+			}
+		}
+		.slider-navi {
+			position: absolute;
+			bottom: 2px;
+			z-index: 5;
+			@include breakpoint(max-width 1023px) {
+				left: calc(15% - 13.5px);
+				bottom: 32.7%;
+			}
+			@include breakpoint(max-width 320px) {
+				left: calc(15% - 12px);
+				bottom: 35.2%;
+			}
+			@include breakpoint(1024px) {
+				right: 246px;
+			}
+			@include breakpoint(1366px) {
+				right: 328px;
+			}
+			@include breakpoint(1600px) {
+				right: 384px;
+			}
+			@include breakpoint(1920px) {
+				right: 461px;
+			}
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 27px;
+				height: 27px;
+				color: $black;
+				font-size: 12px;
+				cursor: pointer;
+				@include breakpoint(1366px) {
+					width: 36px;
+					height: 36px;
+					font-size: 15px;
+				}
+				@include breakpoint(1600px) {
+					width: 42px;
+					height: 42px;
+					font-size: 18px;
+				}
+				@include breakpoint(1920px) {
+					width: 50px;
+					height: 50px;
+					font-size: 21px;
+				}
+				&:first-child {
+					background-color: $primary;
+				}
+				&:last-child {
+					background-color: #fff;
 				}
 			}
 		}
@@ -1247,6 +1393,7 @@ footer {
 			padding-right: 42px;
 		}
 		@include breakpoint(1920px) {
+			top: -50px;
 			width: 1330px;
 			padding-left: 50px;
 			padding-right: 50px;
@@ -1258,10 +1405,10 @@ footer {
 				clear: both;
 			}
 			> .slider-item {
-				float: left;
 				position: relative;
 				@include transition(width 0.3s linear);
 				@include breakpoint(1024px) {
+					float: left;
 					width: 117px;
 					height: 393px;
 				}
@@ -1278,22 +1425,29 @@ footer {
 					height: 737px;
 				}
 				.fellow-img {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					width: calc(100% - 20px);
-					height: 100%;
-					@include translate(-50%, -50%);
 					@include transition(width 0.3s linear);
+					@include breakpoint(1024px) {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						width: calc(100% - 20px);
+						height: 100%;
+						@include translate(-50%, -50%);
+					}
 					&--set {
 						padding-left: 10px;
 						padding-right: 10px;
+						@include breakpoint(max-width 1023px) {
+							display: none;
+						}
 					}
 					&--active {
 						padding-left: 10px;
 						padding-right: 10px;
-						@include opacity(0);
 						z-index: 1;
+						@include breakpoint(1024px) {
+							@include opacity(0);
+						}
 					}
 					img {
 						position: absolute;
@@ -1363,19 +1517,28 @@ footer {
 			display: flex;
 			position: absolute;
 			left: 50%;
-			bottom: 0;
 			@include translateX(-50%);
 			z-index: 5;
+			@include breakpoint(max-width 1023px) {
+				bottom: 120px;
+			}
+			@include breakpoint(max-width 375px) {
+				bottom: 100px;
+			}
+			@include breakpoint(max-width 320px) {
+				bottom: 90px;
+			}
+			@include breakpoint(1024px) {
+				bottom: 0;
+			}
 			li {
+				width: 8px;
+				height: 8px;
 				margin-left: 5px;
 				margin-right: 5px;
 				background-color: rgba(#3d4049, 0.5);
 				@include border-radius(15px);
 				@include transition(all 0.3s);
-				@include breakpoint(1024px) {
-					width: 8px;
-					height: 8px;
-				}
 				@include breakpoint(1366px) {
 					width: 11px;
 					height: 11px;
@@ -1389,9 +1552,7 @@ footer {
 					height: 15px;
 				}
 				&.active {
-					@include breakpoint(1024px) {
-						width: 21px;
-					}
+					width: 21px;
 					@include breakpoint(1366px) {
 						width: 28px;
 					}
@@ -1406,11 +1567,30 @@ footer {
 		}
 	}
 	&-equipment {
-		width: 1200px;
-		height: 585px;
 		margin-left: auto;
 		margin-right: auto;
+		@include breakpoint(1024px) {
+			left: 27px;
+			width: 640px;
+			height: 312px;
+		}
+		@include breakpoint(1366px) {
+			left: 36px;
+			width: 854px;
+			height: 416px;
+		}
+		@include breakpoint(1600px) {
+			left: 42px;
+			width: 1000px;
+			height: 488px;
+		}
+		@include breakpoint(1920px) {
+			left: 50px;
+			width: 1200px;
+			height: 585px;
+		}
 		> .slider-wrap {
+			position: relative;
 			> .slider-item {
 				position: absolute;
 				top: 50%;
@@ -1423,6 +1603,22 @@ footer {
 				&.active {
 					@include opacity(1);
 					z-index: 2;
+				}
+				> h3 {
+					position: absolute;
+					top: 80px;
+					left: 50%;
+					margin: 0;
+					padding-left: 0.2em;
+					color: #fff;
+					font-size: 16px;
+					font-weight: 300;
+					letter-spacing: 0.2em;
+					@include translateX(-50%);
+					@include breakpoint(414px) {
+						top: 115px;
+						font-size: 18px;
+					}
 				}
 			}
 		}
@@ -1443,7 +1639,7 @@ footer {
 				background-color: #4b4e5a;
 				@include breakpoint(1024px) {
 					width: 27px;
-					height: 235px;
+					height: 215px;
 					font-size: 24px;
 				}
 				@include breakpoint(1366px) {
@@ -1472,13 +1668,13 @@ footer {
 				@include transition(all 0.3s);
 				img {
 					@include breakpoint(1024px) {
-						width: 152px;
+						width: 140px;
 					}
 					@include breakpoint(1366px) {
-						width: 203px;
+						width: 196px;
 					}
 					@include breakpoint(1600px) {
-						width: 238px;
+						width: 234px;
 					}
 					@include breakpoint(1920px) {
 						width: 285px;
@@ -1490,13 +1686,13 @@ footer {
 			.slider {
 				&-item {
 					@include breakpoint(1024px) {
-						width: 152px;
+						width: 140px;
 					}
 					@include breakpoint(1366px) {
-						width: 203px;
+						width: 196px;
 					}
 					@include breakpoint(1600px) {
-						width: 238px;
+						width: 234px;
 					}
 					@include breakpoint(1920px) {
 						width: 285px;
@@ -1558,19 +1754,35 @@ footer {
 }
 .card-group {
 	position: relative;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	min-height: 100%;
 	height: 100%;
 	justify-content: center;
 	align-items: center;
+	@include breakpoint(max-width 1023px) {
+		flex-direction: column;
+	}
+	@include breakpoint(1024px) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
 	.card-item {
 		position: relative;
+		@include breakpoint(max-width 1023px) {
+			margin-left: 10%;
+			margin-right: 10%;
+		}
 		+ .card-item {
-			margin-left: 15px;
+			@include breakpoint(max-width 1023px) {
+				margin-top: 20px;
+			}
+			@include breakpoint(1024px) {
+				margin-left: 15px;
+			}
 		}
 		> img {
-			width: 420px;
+			width: 100%;
 			box-shadow: 2px 2px 20px rgba($black, 0.35);
 			transform-origin: 0 50%;
 			@include breakpoint(1024px) {
@@ -1606,19 +1818,55 @@ footer {
 }
 .tab-group {
 	display: flex;
+	@include breakpoint(max-width 1023px) {
+		height: 100%;
+	}
 	.tab-navi {
-		width: 351px;
-		padding-top: 100px;
-		margin-right: 119px;
 		font-size: 0;
+		@include breakpoint(max-width 1023px) {
+			position: absolute;
+			top: 180px;
+			width: 100%;
+			padding-left: 6.25%;
+			padding-right: 6.25%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 0 calc(100% - 130px);
+			z-index: 3;
+		}
+		@include breakpoint(max-width 413px) {
+			top: 170px;
+			grid-gap: 0 calc(100% - 90px);
+		}
+		@include breakpoint(max-width 374px) {
+			top: 115px;
+		}
+		@include breakpoint(1024px) {
+			width: 187px;
+			padding-top: 53px;
+			margin-right: 63px;
+		}
+		@include breakpoint(1366px) {
+			width: 250px;
+			padding-top: 71px;
+			margin-right: 85px;
+		}
+		@include breakpoint(1600px) {
+			width: 294px;
+			padding-top: 83px;
+			margin-right: 89px;
+		}
+		@include breakpoint(1920px) {
+			width: 351px;
+			padding-top: 100px;
+			margin-right: 119px;
+		}
 		li {
-			display: inline-block;
 			position: relative;
-			width: 105px;
+			display: block;
+			width: 45px;
 			height: 0;
-			padding-top: calc( 1.154 * 105px );
-			margin-left: 6px;
-			margin-right: 6px;
+			padding-top: calc( 1.154 * 45px );
 			background-position: center;
 			background-repeat: no-repeat;
 			@include background-size(cover);
@@ -1626,9 +1874,56 @@ footer {
 			-webkit-clip-path: polygon(50% 0%, 0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
 			transition: all 0.3s;
 			cursor: pointer;
-			&:nth-child(n+4) {
-				top: -20px;
-				left: -57.5px;
+			@include breakpoint(max-width 1023px) {
+				margin-bottom: 8px;
+				&:nth-child(2n) {
+					float: right;
+				}
+			}
+			@include breakpoint(376px) {
+				width: 65px;
+				padding-top: calc( 1.154 * 65px );
+			}
+			@include breakpoint(1024px) {
+				display: inline-block;
+				width: 56px;
+				padding-top: calc( 1.154 * 56px );
+				margin-left: 3px;
+				margin-right: 3px;
+				&:nth-child(n+4) {
+					top: -11px;
+					left: -30.7px;
+				}
+			}
+			@include breakpoint(1366px) {
+				width: 75px;
+				padding-top: calc( 1.154 * 75px );
+				margin-left: 4px;
+				margin-right: 4px;
+				&:nth-child(n+4) {
+					top: -14px;
+					left: -40.9px;
+				}
+			}
+			@include breakpoint(1600px) {
+				width: 88px;
+				padding-top: calc( 1.154 * 88px );
+				margin-left: 5px;
+				margin-right: 5px;
+				&:nth-child(n+4) {
+					top: -17px;
+					left: -47.9px;
+				}
+			}
+			@include breakpoint(1920px) {
+				width: 105px;
+				padding-top: calc( 1.154 * 105px );
+				margin-left: 6px;
+				margin-right: 6px;
+				&:nth-child(n+4) {
+					top: -20px;
+					left: -57.5px;
+				}
 			}
 		}
 		&--main {
@@ -1717,76 +2012,311 @@ footer {
 		}
 	}
 	.tab-content-group {
-		width: calc(100% - 470px);
+		@include breakpoint(max-width 1023px) {
+			height: 100%;
+			padding-left: 6.25%;
+			padding-right: 6.25%;
+		}
+		@include breakpoint(1024px) {
+			width: calc(100% - 250px);
+		}
+		@include breakpoint(1366px) {
+			width: calc(100% - 335px);
+		}
+		@include breakpoint(1600px) {
+			width: calc(100% - 383px);
+		}
+		@include breakpoint(1920px) {
+			width: calc(100% - 470px);
+		}
 		.content-item {
 			position: relative;
 			display: none;
+			@include breakpoint(max-width 1023px) {
+				height: 100%;
+			}
 			&.active {
 				display: block;
 			}
 		}
+		.content-body {
+			@include breakpoint(max-width 1023px) {
+				display: flex;
+				flex-direction: column-reverse;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+			}
+		}
 		.content-text {
 			position: relative;
-			width: 310px;
 			z-index: 1;
+			@include breakpoint(max-width 1023px) {
+				padding-right: 180px;
+			}
+			@include breakpoint(max-width 374px) {
+				padding-right: 130px;
+			}
+			@include breakpoint(1024px) {
+				width: 165px;
+			}
+			@include breakpoint(1366px) {
+				width: 221px;
+			}
+			@include breakpoint(1600px) {
+				width: 258px;
+			}
+			@include breakpoint(1920px) {
+				width: 310px;
+			}
 			h3 {
 				color: $primary;
-				font-size: 36px;
 				font-weight: 500;
 				letter-spacing: 0.6em;
+				@include breakpoint(max-width 1023px) {
+					font-size: 18px;
+				}
+				@include breakpoint(1024px) {
+					font-size: 19px;
+				}
+				@include breakpoint(1366px) {
+					font-size: 26px;
+				}
+				@include breakpoint(1600px) {
+					font-size: 30px;
+				}
+				@include breakpoint(1920px) {
+					font-size: 36px;
+				}
 			}
 			h4 {
 				color: #fff;
-				font-size: 21px;
+				@include breakpoint(max-width 1023px) {
+					font-size: 12px;
+				}
+				@include breakpoint(1024px) {
+					font-size: 11px;
+				}
+				@include breakpoint(1366px) {
+					font-size: 15px;
+				}
+				@include breakpoint(1600px) {
+					font-size: 18px;
+				}
+				@include breakpoint(1920px) {
+					font-size: 21px;
+				}
 			}
 			p {
 				color: #fff;
-				font-size: 18px;
+				@include breakpoint(max-width 1023px) {
+					font-size: 12px;
+				}
+				@include breakpoint(1024px) {
+					font-size: 10px;
+				}
+				@include breakpoint(1366px) {
+					font-size: 13px;
+				}
+				@include breakpoint(1600px) {
+					font-size: 15px;
+				}
+				@include breakpoint(1920px) {
+					font-size: 18px;
+				}
 			}
 		}
 		.content-img {
-			position: absolute;
+			@include breakpoint(1024px) {
+				position: absolute;
+			}
 		}
 		.recommend-group {
-			margin-top: 70px;
+			@include breakpoint(max-width 1023px) {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			> img {
+				&.recommend-main {
+					height: 38px;
+					@include breakpoint(1024px) {
+						height: 36px;
+					}
+					@include breakpoint(1366px) {
+						height: 48px;
+					}
+					@include breakpoint(1600px) {
+						height: 57px;
+					}
+					@include breakpoint(1920px) {
+						height: 68px;
+					}
+				}
+				&.recommend-sub {
+					@include breakpoint(1024px) {
+						height: 132px;
+					}
+					@include breakpoint(1366px) {
+						height: 176px;
+					}
+					@include breakpoint(1600px) {
+						height: 207px;
+					}
+					@include breakpoint(1920px) {
+						height: 248px;
+					}
+				}
+			}
 			p {
-				padding-left: 15px;
 				color: #fff;
-				font-size: 18px;
+			}
+			@include breakpoint(1024px) {
+				margin-top: 37px;
+				p {
+					padding-left: 8px;
+					font-size: 10px;
+				}
+			}
+			@include breakpoint(1366px) {
+				margin-top: 50px;
+				p {
+					padding-left: 11px;
+					font-size: 13px;
+				}
+			}
+			@include breakpoint(1600px) {
+				margin-top: 58px;
+				p {
+					padding-left: 13px;
+					font-size: 15px;
+				}
+			}
+			@include breakpoint(1920px) {
+				margin-top: 70px;
+				p {
+					padding-left: 15px;
+					font-size: 18px;
+				}
 			}
 		}
 		.video-group {
 			position: relative;
+			display: table;
 			cursor: pointer;
+			.video-thumbnail {
+				height: 65px;
+				@include breakpoint(375px) {
+					height: 88px;
+				}
+				@include breakpoint(1024px) {
+					height: 85px;
+				}
+				@include breakpoint(1366px) {
+					height: 114px;
+				}
+				@include breakpoint(1600px) {
+					height: 133px;
+				}
+				@include breakpoint(1920px) {
+					height: 160px;
+				}
+			}
 			i.icon {
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				color: #fff;
-				font-size: 54px;
+				font-size: 30px;
 				@include translate(-50%, -50%);
+				@include breakpoint(1024px) {
+					font-size: 29px;
+				}
+				@include breakpoint(1366px) {
+					font-size: 38px;
+				}
+				@include breakpoint(1600px) {
+					font-size: 45px;
+				}
+				@include breakpoint(1920px) {
+					font-size: 54px;
+				}
 			}
 		}
 		&--main {
 			.content-img {
-				top: -120px;
-				right: -30px;
+				@include breakpoint(max-width 1023px) {
+					width: 55%;
+				}
+				@include breakpoint(1024px) {
+					top: -64px;
+					right: -16px;
+					width: 265px;
+				}
+				@include breakpoint(1366px) {
+					top: -85px;
+					right: -21px;
+					width: 354px;
+				}
+				@include breakpoint(1600px) {
+					top: -100px;
+					right: -25px;
+					width: 414px;
+				}
+				@include breakpoint(1920px) {
+					top: -120px;
+					right: -30px;
+					width: 497px;
+				}
 			}
 			.recommend-group {
 				> img {
-					margin-left: -16px;
-					margin-bottom: 5px;
+					margin-left: -9px;
+					@include breakpoint(1366px) {
+						margin-left: -11px;
+					}
+					@include breakpoint(1600px) {
+						margin-left: -13px;
+					}
+					@include breakpoint(1920px) {
+						margin-left: -16px;
+					}
 				}
 			}
 		}
 		&--sub {
 			.content-img {
 				top: 0;
-				right: -50px;
+				@include breakpoint(max-width 1023px) {
+					width: 65%;
+					margin-bottom: 10%;
+				}
+				@include breakpoint(1024px) {
+					right: -27px;
+					width: 246px;
+				}
+				@include breakpoint(1366px) {
+					right: -36px;
+					width: 328px;
+				}
+				@include breakpoint(1600px) {
+					right: -42px;
+					width: 384px;
+				}
+				@include breakpoint(1920px) {
+					right: -50px;
+					width: 461px;
+				}
 			}
 			.recommend-group {
 				> img {
 					margin-bottom: -18px;
+					@include breakpoint(max-width 1023px) {
+						width: 160px;
+					}
+					@include breakpoint(max-width 374px) {
+						width: 110px;
+					}
 				}
 			}
 		}
