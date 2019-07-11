@@ -16,13 +16,20 @@ html, body {
 	min-height: 100%;
 	height: 100%;
 }
+body {
+	&.scroll-fixed {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
+}
 .container {
 	margin-left: auto;
 	margin-right: auto;
 	@include breakpoint(max-width 767px) {
 		width: 100%;
-		padding-left: 10%;
-		padding-right: 10%;
+		padding-left: 15%;
+		padding-right: 15%;
 	}
 	@include breakpoint(768px) {
 		width: 500px;
@@ -40,8 +47,26 @@ html, body {
 		width: 1800px;
 	}
 }
+.desktop {
+	@include breakpoint(max-width 1023px) {
+		display: none !important;
+	}
+}
+.mobile {
+	@include breakpoint(1024px) {
+		display: none !important;
+	}
+}
 .mt0 {
 	margin-top: 0;
+}
+.mt05-mb0 {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+.mt0-mb05 {
+	margin-top: 0;
+	margin-bottom: 0.5em;
 }
 .mb0 {
 	margin-bottom: 0;
@@ -116,14 +141,19 @@ nav {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: rgba($black, 0.3);
-	border-bottom: 1px solid #626262;
-	z-index: 5;
+	z-index: 8;
 	@include breakpoint(max-width 1023px) {
 		display: none;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #313040;
+		z-index: 10;
 	}
 	@include breakpoint(1024px) {
 		min-height: 48px;
+		background-color: rgba($black, 0.3);
+		border-bottom: 1px solid #626262;
 	}
 	@include breakpoint(1366px) {
 		min-height: 64px;
@@ -138,7 +168,18 @@ nav {
 		display: block;
 		color: #879596;
 		&.logo {
+			@include breakpoint(max-width 1023px) {
+				margin-left: -15vw;
+				margin-right: -15vw;
+				padding-left: 80px;
+				padding-right: 80px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #515264;
+			}
 			img {
+				&.mobile {
+					width: 100%;
+				}
 				@include breakpoint(1024px) {
 					height: 48px;
 				}
@@ -173,17 +214,49 @@ nav {
 		}
 		> .flex {
 			justify-content: space-between;
+			@include breakpoint(max-width 1023px) {
+				width: 100%;
+			}
+		}
+		.menu, .sns {
+			width: 100%;
+			justify-content: center;
+			li {
+				text-align: center;
+				a {
+					i {
+						margin-right: 10px;
+					}
+					@include breakpoint(max-width 1023px) {
+						padding-top: 22px;
+						padding-bottom: 22px;
+					}
+					@include breakpoint(max-width 375px) {
+						padding-top: 17px;
+						padding-bottom: 17px;
+					}
+					@include breakpoint(max-width 320px) {
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
+				}
+			}
+		}
+		.sns {
+			li {
+				width: 100%;
+			}
 		}
 		.menu {
-			width: 50%;
-			justify-content: center;
+			@include breakpoint(1024px) {
+				width: 50%;
+			}
 			li {
 				position: relative;
 				margin-bottom: -1px;
 				a {
 					position: relative;
 					min-width: 200px;
-					text-align: center;
 					z-index: 1;
 					@include breakpoint(1024px) {
 						min-width: 106px;
@@ -215,6 +288,9 @@ nav {
 					background-repeat: no-repeat;
 					@include background-size(cover);
 					@include opacity(0);
+					@include breakpoint(max-width 1023px) {
+						display: none;
+					}
 				}
 				&:hover {
 					a {
@@ -227,7 +303,20 @@ nav {
 			}
 		}
 		.btn {
-			margin-left: 110px;
+			&.home {
+				@include breakpoint(1024px) {
+					margin-left: 110px;
+				}
+			}
+			&.close {
+				@include breakpoint(max-width 1023px) {
+					position: fixed;
+					top: 0;
+					right: 0;
+					font-size: 28px;
+					background-color: $black;
+				}
+			}
 		}
 	}
 }
@@ -236,6 +325,7 @@ header {
 	padding-top: 10px;
 	min-height: 100vh;
 	overflow: hidden;
+	z-index: 3;
 	@include breakpoint(1024px) {
 		padding-top: 58px;
 	}
@@ -271,11 +361,11 @@ header {
 		left: 50%;
 		@include translate(-50%, -50%);
 		z-index: 0;
-		&w-100 {
-			width: 100%; 
+		&.w-100 {
+			width: 100%;
 		}
-		&h-100 {
-			height: 100%; 
+		&.h-100 {
+			height: 100%;
 		}
 	}
 	> .container {
@@ -435,16 +525,23 @@ header {
 		}
 		.app-list {
 			width: 100%;
-			margin-top: 16px;
-			margin-bottom: 16px;
 			align-items: center;
-			justify-content: space-between;
 			@include breakpoint(1024px) {
 				margin-top: 45px;
 				margin-bottom: 45px;
+				margin-top: 16px;
+				margin-bottom: 16px;
+				justify-content: space-between;
 			}
 			@include breakpoint(max-width 1023px) {
-				order: 1;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: 1em 0;
+				justify-content: center;
+				background-color: $black;
+				z-index: 7;
 			}
 			li {
 				a {
@@ -454,6 +551,10 @@ header {
 					}
 				}
 				&:not(.app-logo) {
+					@include breakpoint(max-width 1023px) {
+						margin-left: 1em;
+						margin-right: 1em;
+					}
 					img {
 						height: 45px;
 						@include border-radius(10px);
@@ -925,7 +1026,7 @@ footer {
 			}
 		}
 	}
-	&-fade {
+	&-monster {
 		position: relative;
 		margin-left: auto;
 		margin-right: auto;
@@ -1304,6 +1405,28 @@ footer {
 			}
 		}
 	}
+	&-equipment {
+		width: 1200px;
+		height: 585px;
+		margin-left: auto;
+		margin-right: auto;
+		> .slider-wrap {
+			> .slider-item {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				@include opacity(0);
+				@include translate(-50%, -50%);
+				@include transition(all 0.3s);
+				&.active {
+					@include opacity(1);
+					z-index: 2;
+				}
+			}
+		}
+	}
 	&-hide {
 		position: absolute;
 		top: 50%;
@@ -1476,6 +1599,194 @@ footer {
 				&.hover {
 					@include opacity(1);
 					@include transform(scale(1) translate(-50%, -50%));
+				}
+			}
+		}
+	}
+}
+.tab-group {
+	display: flex;
+	.tab-navi {
+		width: 351px;
+		padding-top: 100px;
+		margin-right: 119px;
+		font-size: 0;
+		li {
+			display: inline-block;
+			position: relative;
+			width: 105px;
+			height: 0;
+			padding-top: calc( 1.154 * 105px );
+			margin-left: 6px;
+			margin-right: 6px;
+			background-position: center;
+			background-repeat: no-repeat;
+			@include background-size(cover);
+			shape-inside: polygon(50% 0%, 0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+			-webkit-clip-path: polygon(50% 0%, 0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+			transition: all 0.3s;
+			cursor: pointer;
+			&:nth-child(n+4) {
+				top: -20px;
+				left: -57.5px;
+			}
+		}
+		&--main {
+			li {
+				&:nth-child(1) {
+					background-image: url("../img/equipment-11.png");
+				}
+				&:nth-child(2) {
+					background-image: url("../img/equipment-12.png");
+				}
+				&:nth-child(3) {
+					background-image: url("../img/equipment-13.png");
+				}
+				&:nth-child(4) {
+					background-image: url("../img/equipment-14.png");
+				}
+				&:nth-child(5) {
+					background-image: url("../img/equipment-15.png");
+				}
+				&:nth-child(6) {
+					background-image: url("../img/equipment-16.png");
+				}
+				&:hover, &.active {
+					&:nth-child(1) {
+						background-image: url("../img/equipment-on-11.png");
+					}
+					&:nth-child(2) {
+						background-image: url("../img/equipment-on-12.png");
+					}
+					&:nth-child(3) {
+						background-image: url("../img/equipment-on-13.png");
+					}
+					&:nth-child(4) {
+						background-image: url("../img/equipment-on-14.png");
+					}
+					&:nth-child(5) {
+						background-image: url("../img/equipment-on-15.png");
+					}
+					&:nth-child(6) {
+						background-image: url("../img/equipment-on-16.png");
+					}
+				}
+			}
+		}
+		&--sub {
+			li {
+				&:nth-child(1) {
+					background-image: url("../img/equipment-21.png");
+				}
+				&:nth-child(2) {
+					background-image: url("../img/equipment-22.png");
+				}
+				&:nth-child(3) {
+					background-image: url("../img/equipment-23.png");
+				}
+				&:nth-child(4) {
+					background-image: url("../img/equipment-24.png");
+				}
+				&:nth-child(5) {
+					background-image: url("../img/equipment-25.png");
+				}
+				&:nth-child(6) {
+					background-image: url("../img/equipment-26.png");
+				}
+				&:hover, &.active {
+					&:nth-child(1) {
+						background-image: url("../img/equipment-on-21.png");
+					}
+					&:nth-child(2) {
+						background-image: url("../img/equipment-on-22.png");
+					}
+					&:nth-child(3) {
+						background-image: url("../img/equipment-on-23.png");
+					}
+					&:nth-child(4) {
+						background-image: url("../img/equipment-on-24.png");
+					}
+					&:nth-child(5) {
+						background-image: url("../img/equipment-on-25.png");
+					}
+					&:nth-child(6) {
+						background-image: url("../img/equipment-on-26.png");
+					}
+				}
+			}
+		}
+	}
+	.tab-content-group {
+		width: calc(100% - 470px);
+		.content-item {
+			position: relative;
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+		.content-text {
+			position: relative;
+			width: 310px;
+			z-index: 1;
+			h3 {
+				color: $primary;
+				font-size: 36px;
+				font-weight: 500;
+				letter-spacing: 0.6em;
+			}
+			h4 {
+				color: #fff;
+				font-size: 21px;
+			}
+			p {
+				color: #fff;
+				font-size: 18px;
+			}
+		}
+		.content-img {
+			position: absolute;
+		}
+		.recommend-group {
+			margin-top: 70px;
+			p {
+				padding-left: 15px;
+				color: #fff;
+				font-size: 18px;
+			}
+		}
+		.video-group {
+			position: relative;
+			cursor: pointer;
+			i.icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				color: #fff;
+				font-size: 54px;
+				@include translate(-50%, -50%);
+			}
+		}
+		&--main {
+			.content-img {
+				top: -120px;
+				right: -30px;
+			}
+			.recommend-group {
+				> img {
+					margin-left: -16px;
+					margin-bottom: 5px;
+				}
+			}
+		}
+		&--sub {
+			.content-img {
+				top: 0;
+				right: -50px;
+			}
+			.recommend-group {
+				> img {
+					margin-bottom: -18px;
 				}
 			}
 		}
