@@ -372,6 +372,9 @@ header {
 		position: relative;
 		padding-bottom: 50px;
 		z-index: 3;
+		@include breakpoint(max-width 1023px) {
+			padding-bottom: 90px;
+		}
 		> .flex {
 			justify-content: center;
 		}
@@ -1705,6 +1708,23 @@ ul.list-reset.app-list {
 	100% {
 		right: -267px;
 		opacity: 1;
+	}
+}
+.animation {
+	position: fixed;
+	left: 50%;
+	bottom: 75px;
+	color: #fff;
+	font-size: 0.5em;
+	@include translateX(-50%);
+	@include animation(animate-tb 1s forwards infinite alternate);
+}
+@include keyframes(animate-tb) {
+	0% {
+		bottom: 75px;
+	}
+	100% {
+		bottom: 85px;
 	}
 }
 .card-group {

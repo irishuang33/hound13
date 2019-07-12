@@ -748,6 +748,11 @@ header .container {
   padding-bottom: 50px;
   z-index: 3;
 }
+@media (max-width: 1023px) {
+  header .container {
+    padding-bottom: 90px;
+  }
+}
 header .container > .flex {
   justify-content: center;
 }
@@ -2601,6 +2606,45 @@ ul.list-reset.app-list li.app-logo img {
   100% {
     right: -267px;
     opacity: 1;
+  }
+}
+.animation {
+  position: fixed;
+  left: 50%;
+  bottom: 75px;
+  color: #fff;
+  font-size: 0.5em;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -moz-animation: animate-tb 1s forwards infinite alternate;
+  -webkit-animation: animate-tb 1s forwards infinite alternate;
+  animation: animate-tb 1s forwards infinite alternate;
+}
+
+@-moz-keyframes animate-tb {
+  0% {
+    bottom: 75px;
+  }
+  100% {
+    bottom: 85px;
+  }
+}
+@-webkit-keyframes animate-tb {
+  0% {
+    bottom: 75px;
+  }
+  100% {
+    bottom: 85px;
+  }
+}
+@keyframes animate-tb {
+  0% {
+    bottom: 75px;
+  }
+  100% {
+    bottom: 85px;
   }
 }
 .card-group {
