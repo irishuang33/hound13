@@ -1320,7 +1320,6 @@ ul.list-reset.app-list {
 		> .slider-wrap {
 			@include breakpoint(max-width 1023px) {
 				position: relative;
-				top: 2.5%;
 				height: 100%;
 			}
 			&::before, &::after {

@@ -2025,7 +2025,6 @@ ul.list-reset.app-list li.app-logo img {
 @media (max-width: 1023px) {
   .slider-infinite > .slider-wrap {
     position: relative;
-    top: 2.5%;
     height: 100%;
   }
 }
