@@ -2616,8 +2616,7 @@ ul.list-reset.app-list li.app-logo img {
 @media (max-width: 1023px) {
   .card-group {
     flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 90px;
+    padding-bottom: 25px;
   }
 }
 @media (min-width: 1024px) {
