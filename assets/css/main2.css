@@ -1515,7 +1515,7 @@ footer .container .sns li a:hover {
 }
 @media (max-width: 1023px) {
   .slider-monster > .slider-wrap {
-    top: -150px;
+    top: -60px;
   }
 }
 .slider-monster > .slider-wrap > .slider-item {
@@ -1911,6 +1911,7 @@ footer .container .sns li a:hover {
 @media (max-width: 1023px) {
   .slider-infinite > .slider-wrap {
     position: relative;
+    top: -60px;
     height: 100%;
   }
 }
@@ -2197,7 +2198,7 @@ footer .container .sns li a:hover {
 }
 .slider-equipment > .slider-wrap > .slider-item > h3 {
   position: absolute;
-  top: 80px;
+  top: -15px;
   left: 50%;
   margin: 0;
   padding-left: 0.2em;
@@ -2212,7 +2213,7 @@ footer .container .sns li a:hover {
 }
 @media (min-width: 414px) {
   .slider-equipment > .slider-wrap > .slider-item > h3 {
-    top: 115px;
+    top: 15px;
     font-size: 18px;
   }
 }
@@ -2579,7 +2580,13 @@ footer .container .sns li a:hover {
 }
 @media (max-width: 1023px) {
   .tab-group {
+    padding-top: 50px;
     height: 100%;
+  }
+}
+@media (max-width: 413px) {
+  .tab-group {
+    padding-top: 10px;
   }
 }
 .tab-group .tab-navi {
@@ -2588,7 +2595,7 @@ footer .container .sns li a:hover {
 @media (max-width: 1023px) {
   .tab-group .tab-navi {
     position: absolute;
-    top: 180px;
+    top: 80px;
     width: 100%;
     padding-left: 6.25%;
     padding-right: 6.25%;
@@ -2600,39 +2607,39 @@ footer .container .sns li a:hover {
 }
 @media (max-width: 413px) {
   .tab-group .tab-navi {
-    top: 170px;
+    top: 70px;
     grid-gap: 0 calc(100% - 90px);
   }
 }
 @media (max-width: 374px) {
   .tab-group .tab-navi {
-    top: 115px;
+    top: 75px;
   }
 }
 @media (min-width: 1024px) {
   .tab-group .tab-navi {
-    width: 187px;
+    width: 27px;
     padding-top: 53px;
     margin-right: 63px;
   }
 }
 @media (min-width: 1366px) {
   .tab-group .tab-navi {
-    width: 250px;
+    width: 130px;
     padding-top: 71px;
     margin-right: 85px;
   }
 }
 @media (min-width: 1600px) {
   .tab-group .tab-navi {
-    width: 294px;
+    width: 174px;
     padding-top: 83px;
     margin-right: 89px;
   }
 }
 @media (min-width: 1920px) {
   .tab-group .tab-navi {
-    width: 351px;
+    width: 231px;
     padding-top: 100px;
     margin-right: 119px;
   }
