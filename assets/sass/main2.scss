@@ -326,18 +326,18 @@ header {
 	min-height: 100vh;
 	overflow: hidden;
 	z-index: 3;
-	@include breakpoint(1024px) {
-		padding-top: 58px;
-	}
-	@include breakpoint(1366px) {
-		padding-top: 74px;
-	}
-	@include breakpoint(1600px) {
-		padding-top: 85px;
-	}
-	@include breakpoint(1920px) {
-		padding-top: 100px;
-	}
+	// @include breakpoint(1024px) {
+	// 	padding-top: 58px;
+	// }
+	// @include breakpoint(1366px) {
+	// 	padding-top: 74px;
+	// }
+	// @include breakpoint(1600px) {
+	// 	padding-top: 85px;
+	// }
+	// @include breakpoint(1920px) {
+	// 	padding-top: 100px;
+	// }
 	&::before, &::after {
 		@extend %before-after;
 		position: absolute;
@@ -357,19 +357,20 @@ header {
 	}
 	video {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		@include translate(-50%, -50%);
-		z-index: 0;
-		&.w-100 {
-			width: 100%;
-		}
-		&.h-100 {
-			height: 100%;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		&::-webkit-media-controls {
+			display: none !important;
 		}
 	}
-	> .container {
+	.container {
 		position: relative;
+		padding-bottom: 50px;
 		z-index: 3;
 		> .flex {
 			justify-content: center;
@@ -862,182 +863,6 @@ footer {
 			}
 		}
 	}
-	&-lr {
-		height: 100vh;
-		background-image: url("../img/bgMedia.png");
-		background-position: center;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		@include background-size(cover);
-		// overflow: hidden;
-		> .slider-wrap {
-			position: relative;
-			height: 100vh;
-			> .slider-item {
-				// float: left;
-				position: relative;
-				height: 100vh;
-				overflow: hidden;
-				@include breakpoint(1024px) {
-					padding-top: 48px;
-					padding-bottom: 48px;
-				}
-				@include breakpoint(1366px) {
-					padding-top: 65px;
-					padding-bottom: 65px;
-				}
-				@include breakpoint(1600px) {
-					padding-top: 75px;
-					padding-bottom: 75px;
-				}
-				@include breakpoint(1920px) {
-					padding-top: 150px;
-					padding-bottom: 150px;
-				}
-				&:not(:first-child) {
-					background-image: url("../img/bgAd.png");
-					background-position: center;
-					background-attachment: fixed;
-					background-repeat: no-repeat;
-					@include background-size(cover);
-					@include breakpoint(1024px) {
-						padding-top: 138px;
-					}
-					@include breakpoint(1366px) {
-						padding-top: 185px;
-					}
-					@include breakpoint(1600px) {
-						padding-top: 215px;
-					}
-					@include breakpoint(1920px) {
-						padding-top: 235px;
-					}
-				}
-			}
-		}
-		&-navi {
-			display: none;
-			position: absolute;
-			top: 50%;
-			line-height: 1.25;
-			z-index: 1;
-			@include translateY(-50%);
-			@include breakpoint(1024px) {
-				left: 101px;
-			}
-			@include breakpoint(1366px) {
-				left: 135px;
-			}
-			@include breakpoint(1600px) {
-				left: 158px;
-			}
-			@include breakpoint(1920px) {
-				left: 190px;
-			}
-			li {
-				color: #727378;
-				cursor: pointer;
-				@include breakpoint(1024px) {
-					font-size: 10px;
-				}
-				@include breakpoint(1366px) {
-					font-size: 13px;
-				}
-				@include breakpoint(1600px) {
-					font-size: 15px;
-				}
-				@include breakpoint(1920px) {
-					font-size: 18px;
-				}
-				&.active {
-					color: #fff;
-				}
-			}
-			> li {
-				@include breakpoint(1024px) {
-					padding-left: 14px;
-				}
-				@include breakpoint(1366px) {
-					padding-left: 18px;
-				}
-				@include breakpoint(1600px) {
-					padding-left: 22px;
-				}
-				@include breakpoint(1920px) {
-					padding-left: 26px;
-				}
-				+ li {
-					@include breakpoint(1024px) {
-						margin-top: 11px;
-					}
-					@include breakpoint(1366px) {
-						margin-top: 14px;
-					}
-					@include breakpoint(1600px) {
-						margin-top: 17px;
-					}
-					@include breakpoint(1920px) {
-						margin-top: 20px;
-					}
-				}
-			}
-			.character {
-				border-left: 1px solid #fff;
-				@include breakpoint(1024px) {
-					margin-left: -14px;
-				}
-				@include breakpoint(1366px) {
-					margin-left: -18px;
-				}
-				@include breakpoint(1600px) {
-					margin-left: -22px;
-				}
-				@include breakpoint(1920px) {
-					margin-left: -26px;
-				}
-				> li {
-					border-left: solid transparent;
-					@include breakpoint(1024px) {
-						padding-left: 11px;
-						font-size: 13px;
-						border-left-width: 2px;
-					}
-					@include breakpoint(1366px) {
-						padding-left: 14px;
-						font-size: 17px;
-						border-left-width: 3px;
-					}
-					@include breakpoint(1600px) {
-						padding-left: 17px;
-						font-size: 20px;
-						border-left-width: 4px;
-					}
-					@include breakpoint(1920px) {
-						padding-left: 20px;
-						font-size: 24px;
-						border-left-width: 5px;
-					}
-					+ li {
-						@include breakpoint(1024px) {
-							margin-top: 8px;
-						}
-						@include breakpoint(1366px) {
-							margin-top: 11px;
-						}
-						@include breakpoint(1600px) {
-							margin-top: 13px;
-						}
-						@include breakpoint(1920px) {
-							margin-top: 15px;
-						}
-					}
-					&.active {
-						border-color: #fff;
-					}
-				}
-			}
-		}
-	}
 	.item-title {
 		position: absolute;
 		@include breakpoint(max-width 1023px) {
@@ -1081,22 +906,19 @@ footer {
 			margin-bottom: -84px;
 		}
 	}
-	@include breakpoint(max-width 1023px) {
-		.item-container {
+	.item-container {
+		@include breakpoint(max-width 1023px) {
 			height: 100%;
-			> .slider {
-				height: 100%;
-				> .slider-wrap {
-					height: 100%;
-					> .slider-item {
-						height: 100%;
-					}
-				}
-			}
+			padding-top: 100px;
+		}
+		@include breakpoint(1024px) {
+			padding-top: 100px;
 		}
 	}
 	&-monster {
 		position: relative;
+		width: 100%;
+		height: 100%;
 		margin-left: auto;
 		margin-right: auto;
 		@include breakpoint(1024px) {
@@ -1116,6 +938,12 @@ footer {
 			height: 660px;
 		}
 		> .slider-wrap {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			@include breakpoint(max-width 1023px) {
+				top: -150px;
+			}
 			> .slider-item {
 				position: absolute;
 				top: 50%;
@@ -1374,6 +1202,9 @@ footer {
 		position: relative;
 		margin-left: auto;
 		margin-right: auto;
+		@include breakpoint(max-width 1023px) {
+			height: 100%;
+		}
 		@include breakpoint(1024px) {
 			width: 709px;
 			padding-left: 27px;
@@ -1396,6 +1227,10 @@ footer {
 			padding-right: 50px;
 		}
 		> .slider-wrap {
+			@include breakpoint(max-width 1023px) {
+				position: relative;
+				height: 100%;
+			}
 			&::before, &::after {
 				display: table;
 				content: '';
@@ -1404,6 +1239,14 @@ footer {
 			> .slider-item {
 				position: relative;
 				@include transition(width 0.3s linear);
+				@include breakpoint(max-width 1023px) {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 100%;
+					height: 100%;
+					@include translate(-50%, -50%);
+				}
 				@include breakpoint(1024px) {
 					float: left;
 					width: 117px;
@@ -1567,22 +1410,22 @@ footer {
 		margin-left: auto;
 		margin-right: auto;
 		@include breakpoint(1024px) {
-			left: 27px;
+			// left: 27px;
 			width: 640px;
 			height: 312px;
 		}
 		@include breakpoint(1366px) {
-			left: 36px;
+			// left: 36px;
 			width: 854px;
 			height: 416px;
 		}
 		@include breakpoint(1600px) {
-			left: 42px;
+			// left: 42px;
 			width: 1000px;
 			height: 488px;
 		}
 		@include breakpoint(1920px) {
-			left: 50px;
+			// left: 50px;
 			width: 1200px;
 			height: 585px;
 		}
@@ -1695,6 +1538,27 @@ footer {
 						width: 285px;
 					}
 				}
+			}
+		}
+	}
+	// 背景
+	&-bg {
+		background-position: center;
+		background-repeat: no-repeat;
+		// background-attachment: fixed;
+		@include background-size(cover);
+		&.slider {
+			&-game-menu {
+				background-image: url("../img/bgMedia.png");
+			}
+			&-monster {
+				background-image: url("../img/bgAd.png");
+			}
+			&-fellow {
+				background-image: url("../img/bgAd.png");
+			}
+			&-equipment {
+				background-image: url("../img/bgAd.png");
 			}
 		}
 	}

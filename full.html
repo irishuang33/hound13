@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Background Video  - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen background videos." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,video,full-screen" />
+	<meta name="Resource-type" content="Document" />
+	<link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/fullpage.css" />
+	<link rel="stylesheet" href="assets/css/main2.css">
+</head>
+<body>
+	<a href="#!" class="btn btn--90 hamburgur"><i class="icon icon-hamburger"></i></a>
+	<nav id="nav">
+		<div class="container">
+			<div class="flex">
+				<a href="#!" class="logo">
+					<img src="assets/img/logo-black.png" alt="HOUNDRED SOUL" class="desktop">
+					<img src="assets/img/HS_Logo.png" alt="HOUNDRED SOUL" class="mobile">
+				</a>
+				<ul class="menu list-reset flex">
+					<li><a href="#gameMenu">遊戲</a></li>
+					<li><a href="#!">儲值</a></li>
+					<li><a href="#!">客服</a></li>
+					<li><a href="#!">公告</a></li>
+				</ul>
+				<ul class="sns mobile list-reset">
+					<li><a href="https://www.facebook.com/hundredsoul.tw" target="_blank"><i class="icon icon-facebook"></i>Facebook</a></li>
+					<li><a href="https://www.instagram.com/hundredsoul_tw/" target="_blank"><i class="icon icon-instagram"></i>Instagram</a></li>
+					<li><a href="https://twitter.com/HundredSoulTW" target="_blank"><i class="icon icon-twitter"></i>Twitter</a></li>
+					<li><a href="https://www.youtube.com/channel/UCJKom9AdipwO58HMVMMrx8w/" target="_blank"><i class="icon icon-youtube"></i>YouTube</a></li>
+				</ul>
+				<a href="#!" class="btn btn--90 home desktop"><i class="icon icon-home"></i></a>
+				<a href="#!" class="btn btn--90 close mobile"><i class="icon icon-close"></i></a>
+			</div>
+		</div>
+	</nav>
+	<div id="fullpage">
+		<header class="section">
+			<video autoplay muted loop poster="assets/img/1920x1080.jpg" data-autoplay>
+				<source src="assets/img/comp2_9.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+			<div class="container">
+				<div class="flex">
+					<div class="content">
+						<img src="assets/img/HS_Logo.png" alt="">
+						<i class="icon icon-play function--playFullScreen" data-video="07uyx4d0DpY"></i>
+						<div class="slider slider--application">
+							<ul class="slider__image list-reset">
+								<li class="active">
+									<img src="assets/img/application01.png" alt="">
+								</li>
+								<li>
+									<img src="assets/img/application02.png" alt="">
+								</li>
+								<li>
+									<img src="assets/img/application03.png" alt="">
+								</li>
+							</ul>
+							<div class="slider__mask">
+								<img src="assets/img/triangle.png" alt="">
+							</div>
+						</div>
+						<ul class="app-list list-reset flex">
+							<li class="app-logo"><a href="#!"><img src="assets/img/google_play@3x.png" alt=""></a></li>
+							<li><a href="#!"><img src="assets/img/hound13.png" alt=""></a></li>
+							<li class="app-logo"><a href="#!"><img src="assets/img/apple_store@3x.png" alt=""></a></li>
+						</ul>
+						<div class="coptText">
+							<ul class="slider__text list-reset">
+								<li class="active">魔物 = 副官 x <strong>武器</strong></li>
+								<li>魔物 = <strong>副官</strong> x 武器</li>
+								<li><strong>魔物</strong> = 副官 x 武器</li>
+							</ul>
+							<p>百種以上相對性戰鬥組合</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="section slider slider-bg slider-game-menu">
+			<div class="flex card-group desktop">
+				<a class="card-item" href="#monster">
+					<img class="normal" src="assets/img/monster-normal.png" alt="">
+					<img class="hover" src="assets/img/monster-hover.png" alt="">
+					<span class="sr-only">魔物 Monster</span>
+				</a>
+				<a class="card-item" href="#fellow">
+					<img class="normal" src="assets/img/fellow-normal.png" alt="">
+					<img class="hover" src="assets/img/fellow-hover.png" alt="">
+					<span class="sr-only">副官 Fellow</span>
+				</a>
+				<a class="card-item" href="#equipmentMain">
+					<img class="normal" src="assets/img/equipment-normal.png" alt="">
+					<img class="hover" src="assets/img/equipment-hover.png" alt="">
+					<span class="sr-only">武器 equipment</span>
+				</a>
+			</div>
+			<div class="flex card-group mobile">
+				<a class="card-item" href="#monster">
+					<img class="normal" src="assets/img/monster-mobile.png" alt="">
+					<span class="sr-only">魔物 Monster</span>
+				</a>
+				<a class="card-item" href="#fellow">
+					<img class="normal" src="assets/img/fellow-mobile.png" alt="">
+					<span class="sr-only">副官 Fellow</span>
+				</a>
+				<a class="card-item" href="#equipmentMain">
+					<img class="normal" src="assets/img/equipment-main-mobile.png" alt="">
+					<span class="sr-only">主武器 equipment</span>
+				</a>
+				<a class="card-item" href="#equipmentSub">
+					<img class="normal" src="assets/img/equipment-sub-mobile.png" alt="">
+					<span class="sr-only">輔助武器 equipmentSub</span>
+				</a>
+			</div>
+		</div>
+		<div class="section slider slider-bg slider-monster">
+			<img src="assets/img/monster-title.png" alt="魔物" class="item-title">
+			<div class="item-container">
+				<div class="slider slider-fade slider-monster">
+					<ul class="slider-navi list-reset">
+						<li class="slider-navi--prev"><i class="icon icon-slider-left"></i></li>
+						<li class="slider-navi--next"><i class="icon icon-slider-right"></i></li>
+					</ul>
+					<div class="slider-wrap">
+						<div class="slider-item">
+							<div class="slider-body">
+								<img src="assets/img/decoration-up.png" alt="" class="decoration">
+								<div class="slider-text">
+									<h3 class="mtb0">紅眼拉米亞</h3>
+									<p>
+										<span>是一種會讓對方變成石頭的魔物</span>
+										<span>若是被此一魔物看見，身體就會變石頭</span>
+										<span>千萬要多加小心</span>
+										<span>別忘記使用防盾就能抵禦其目光</span>
+									</p>
+								</div>
+								<img src="assets/img/decoration-down.png" alt="" class="decoration">
+								<p>
+									<span>魔物都有弱點！</span>
+									<span>搭配相對的副官與武器即可過關</span>
+								</p>
+							</div>
+							<img src="assets/img/slideEvilImgt01.png" alt="" class="slider-img">
+						</div>
+						<div class="slider-item active">
+							<div class="slider-body">
+								<img src="assets/img/decoration-up.png" alt="" class="decoration">
+								<div class="slider-text">
+									<h3 class="mtb0">暗影怨靈</h3>
+									<p>
+										<span>是飄浮在黑暗中的邪惡怨靈</span>
+										<span>靈體狀態時任何攻擊都不管用</span>
+										<span>但施加攻擊時其靈體會暫時實體化</span>
+										<span>請一定要把握機會攻擊</span>
+									</p>
+								</div>
+								<img src="assets/img/decoration-down.png" alt="" class="decoration">
+								<p>
+									<span>魔物都有弱點！</span>
+									<span>搭配相對的副官與武器即可過關</span>
+								</p>
+							</div>
+							<img src="assets/img/slideEvilImgt02.png" alt="" class="slider-img">
+						</div>
+						<div class="slider-item">
+							<div class="slider-body">
+								<img src="assets/img/decoration-up.png" alt="" class="decoration">
+								<div class="slider-text">
+									<h3 class="mtb0">不死巨魔</h3>
+									<p>
+										<span>是能瞬間回復傷口的魔物</span>
+										<span>受傷時會習慣性採取防禦姿態回復傷勢</span>
+										<span>由於此時會全力防禦，攻擊難以奏效</span>
+										<span>擊倒狀態異常相當脆弱請立刻擊倒對方</span>
+									</p>
+								</div>
+								<img src="assets/img/decoration-down.png" alt="" class="decoration">
+								<p>
+									<span>魔物都有弱點！</span>
+									<span>搭配相對的副官與武器即可過關</span>
+								</p>
+							</div>
+							<img src="assets/img/slideEvilImgt03.png" alt="不死巨魔" class="slider-img">
+						</div>
+						<div class="slider-item">
+							<div class="slider-body">
+								<img src="assets/img/decoration-up.png" alt="" class="decoration">
+								<div class="slider-text">
+									<h3 class="mtb0">旋風鷹身人</h3>
+									<p>
+										<span>是操控風之力的天空狩獵者</span>
+										<span>引起旋風的瞬間請快速攻擊阻斷旋風的形成</span>
+										<span>在地上飛行時會呈現對浮空狀態異常較為脆弱</span>
+										<span>最好能把握機會</span>
+									</p>
+								</div>
+								<img src="assets/img/decoration-down.png" alt="" class="decoration">
+								<p>
+									<span>魔物都有弱點！</span>
+									<span>搭配相對的副官與武器即可過關</span>
+								</p>
+							</div>
+							<img src="assets/img/slideEvilImgt04.png" alt="旋風鷹身人" class="slider-img">
+						</div>
+						<div class="slider-item">
+							<div class="slider-body">
+								<img src="assets/img/decoration-up.png" alt="" class="decoration">
+								<div class="slider-text">
+									<h3 class="mtb0">奇美拉</h3>
+									<p>
+										<span>是被稱為魔獸之王的最高階魔物</span>
+										<span>想要擊敗奇美拉</span>
+										<span>就必須把一切戰鬥技術發揮至極限</span>
+										<span>我會祈禱女神保佑救世主的偉大挑戰</span>
+									</p>
+								</div>
+								<img src="assets/img/decoration-down.png" alt="" class="decoration">
+								<p>
+									<span>魔物都有弱點！</span>
+									<span>搭配相對的副官與武器即可過關</span>
+								</p>
+							</div>
+							<img src="assets/img/slideEvilImgt05.png" alt="奇美拉" class="slider-img">
+						</div>
+						<div class="slider-item">
+							<div class="slider-body">
+								<img src="assets/img/decoration-up.png" alt="" class="decoration">
+								<div class="slider-text">
+									<h3 class="mtb0">米諾陶</h3>
+									<p>
+										<span>是殲滅一整個騎士團的傳奇魔物</span>
+										<span>由於米諾陶具備超強的防禦力被稱為移動的城堡</span>
+										<span>米諾陶並非無法攻破的銅牆鐵壁</span>
+										<span>一定會有方法可以擊潰其防備</span>
+									</p>
+								</div>
+								<img src="assets/img/decoration-down.png" alt="" class="decoration">
+								<p>
+									<span>魔物都有弱點！</span>
+									<span>搭配相對的副官與武器即可過關</span>
+								</p>
+							</div>
+							<img src="assets/img/slideEvilImgt06.png" alt="米諾陶" class="slider-img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section slider slider-bg slider-fellow">
+			<img src="assets/img/fellow-title.png" alt="副官" class="item-title">
+			<div class="item-container">
+				<div class="slider slider-infinite">
+					<div class="slider-wrap">
+						<div class="slider-item">
+							<div class="fellow-img fellow-img--set">
+								<img src="assets/img/adCha01.png" alt="">
+								<img src="assets/img/adCha01_on.png" alt="" class="on">
+							</div>
+							<div class="fellow-img fellow-img--active">
+								<img src="assets/img/adCha01_active.png" alt="">
+							</div>
+							<h4 class="sr-only">開朗的突擊少女</h4>
+							<h3 class="sr-only">菲力帕</h3>
+							<p class="sr-only">讓敵人陷入暈眩狀態，破壞霸體的專門副官</p>
+						</div>
+						<div class="slider-item">
+							<div class="fellow-img fellow-img--set">
+								<img src="assets/img/adCha02.png" alt="">
+								<img src="assets/img/adCha02_on.png" alt="" class="on">
+							</div>
+							<div class="fellow-img fellow-img--active">
+								<img src="assets/img/adCha02_active.png" alt="">
+							</div>
+							<h4 class="sr-only">北方守護者</h4>
+							<h3 class="sr-only">基加提克</h3>
+							<p class="sr-only">讓敵人陷入浮空狀態，擊倒狀態後附加額外的打擊</p>
+						</div>
+						<div class="slider-item active">
+							<div class="fellow-img fellow-img--set">
+								<img src="assets/img/adCha03.png" alt="">
+								<img src="assets/img/adCha03_on.png" alt="" class="on">
+							</div>
+							<div class="fellow-img fellow-img--active">
+								<img src="assets/img/adCha03_active.png" alt="">
+							</div>
+							<h4 class="sr-only">森林守護者</h4>
+							<h3 class="sr-only">娜絲瑞</h3>
+							<p class="sr-only">讓敵人陷入暈眩狀態，浮空狀態後給予額外的打擊</p>
+						</div>
+						<div class="slider-item">
+							<div class="fellow-img fellow-img--set">
+								<img src="assets/img/adCha04.png" alt="">
+								<img src="assets/img/adCha04_on.png" alt="" class="on">
+							</div>
+							<div class="fellow-img fellow-img--active">
+								<img src="assets/img/adCha04_active.png" alt="">
+							</div>
+							<h4 class="sr-only">女神之子</h4>
+							<h3 class="sr-only">拉黎卡</h3>
+							<p class="sr-only">專門輔助我軍攻擊且治癒傷勢，解除狀態異常回復瀕死狀態</p>
+						</div>
+						<div class="slider-item">
+							<div class="fellow-img fellow-img--set">
+								<img src="assets/img/adCha05.png" alt="">
+								<img src="assets/img/adCha05_on.png" alt="" class="on">
+							</div>
+							<div class="fellow-img fellow-img--active">
+								<img src="assets/img/adCha05_active.png" alt="">
+							</div>
+							<h4 class="sr-only">炙烈的火焰魔女</h4>
+							<h3 class="sr-only">凱倫</h3>
+							<p class="sr-only">讓敵人陷入灼傷、暈眩狀態，灼傷狀態爆炸後造成範圍攻擊</p>
+						</div>
+					</div>
+					<ul class="slider-dot list-reset">
+						<li></li>
+						<li></li>
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="slider-hide">
+						<div class="slider-arrow"><i class="icon icon-slider-right"></i></div>
+						<div class="slider-item">
+							<h4 class="sr-only">聖殿騎士團副團長</h4>
+							<h3 class="sr-only">卡伊琳</h3>
+							<p class="sr-only">讓敵人陷入束縛狀態，曾獲得雷蒙大師的指導</p>
+							<img src="assets/img/adCha-6.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section slider slider-bg slider-equipment slider-equipment--main">
+			<img src="assets/img/equipment-title.png" alt="武器" class="item-title">
+			<div class="item-container">
+				<div class="slider slider-equipment">
+					<div class="slider-wrap">
+						<div class="slider-item active">
+							<h3 class="mobile">主武器</h3>
+							<div class="tab-group">
+								<ul class="tab-navi tab-navi--main list-reset">
+									<li class="active"></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<div class="tab-content-group tab-content-group--main">
+									<div class="content-item active">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">弒風者</h3>
+												<p class="mtb0">
+													專門攻擊<strong>浮空</strong>狀態的主武器
+												</p>
+												<p class="mtb0">
+													大陸三劍聖之一，賽裴魯司的愛劍。
+												</p>
+												<p class="mtb0">
+													據說達到最高境界的人能用這把劍斬斷風。
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-main" src="assets/img/recommend-group-11.png" alt="">
+													<div class="video-group function--playFullScreen" data-video="kIsNQ-Lx2Ng">
+														<img src="assets/img/imgMovie01.png" alt="" class="video-thumbnail">
+														<i class="icon icon-play"></i>
+													</div>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-11.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">夜暮</h3>
+												<p class="mtb0">
+													專門攻擊<strong>暈眩</strong>狀態的主武器
+												</p>
+												<p class="mtb0">
+													英雄王托雷多被冊封為王太子時先王賜予的劍，是歷代潘特拉王代代相傳的傳家之寶。
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-main" src="assets/img/recommend-group-12.png" alt="">
+													<div class="video-group function--playFullScreen" data-video="6Gt11LKNXTY">
+														<img src="assets/img/imgMovie02.png" alt="" class="video-thumbnail">
+														<i class="icon icon-play"></i>
+													</div>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-12.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">半月</h3>
+												<p class="mtb0">
+													專門攻擊<strong>暈眩</strong>狀態的主武器 
+												</p>
+												<p class="mtb0">
+													英雄王托雷多被冊封為王太子時先王賜予的劍，是歷代潘特拉王代代相傳的傳家之寶。
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-main" src="assets/img/recommend-group-13.png" alt="">
+													<div class="video-group function--playFullScreen" data-video="BIBK9eVVY2A">
+														<img src="assets/img/imgMovie03.png" alt="" class="video-thumbnail">
+														<i class="icon icon-play"></i>
+													</div>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-13.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">決鬥者</h3>
+												<p class="mtb0">
+													專門攻擊<strong>浮空</strong>狀態的主武器
+												</p>
+												<p class="mtb0">
+													英雄王托雷多單槍匹馬突破闇影峽谷時使用 的武器，據說他只花了不到半天的時間， 就突破了這個充滿魔物的
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-main" src="assets/img/recommend-group-14.png" alt="">
+													<div class="video-group function--playFullScreen" data-video="pWNz-V4OmVE">
+														<img src="assets/img/imgMovie04.png" alt="" class="video-thumbnail">
+														<i class="icon icon-play"></i>
+													</div>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-14.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">碎骨者</h3>
+												<p class="mtb0">
+													專門攻擊<strong>擊倒、石化</strong>狀態的主武器 
+												</p>
+												<p class="mtb0">
+													為潘特拉的突擊隊長巴爾多量身訂做的戰錘，面對碎骨者，任何一個魔物都無法避免骨頭碎裂的命運。
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-main" src="assets/img/recommend-group-15.png" alt="">
+													<div class="video-group function--playFullScreen" data-video="PIp_ZPu864g">
+														<img src="assets/img/imgMovie05.png" alt="" class="video-thumbnail">
+														<i class="icon icon-play"></i>
+													</div>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-15.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">熾焰巨劍</h3>
+												<p class="mtb0">
+													專門攻擊<strong>灼傷</strong>狀態的主武器
+												</p>
+												<p class="mtb0">
+													守護黑灰火山的羅敦四代王，裴伊剛的劍，由火之族所贈予。
+												</p>
+												<p class="mtb0">
+													利用熔岩般的刀刃焚燒敵人，使其變成灰燼。
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-main" src="assets/img/recommend-group-16.png" alt="">
+													<div class="video-group function--playFullScreen" data-video="JJlG86uTgNA">
+														<img src="assets/img/imgMovie06.png" alt="" class="video-thumbnail">
+														<i class="icon icon-play"></i>
+													</div>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-16.png" alt="" class="content-img">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section slider slider-bg slider-equipment slider-equipment--sub">
+			<img src="assets/img/equipment-title.png" alt="武器" class="item-title">
+			<div class="item-container">
+				<div class="slider slider-equipment">
+					<div class="slider-wrap">
+						<div class="slider-item active">
+							<h3 class="mobile">輔助武器</h3>
+							<div class="tab-group">
+								<ul class="tab-navi tab-navi--sub list-reset">
+									<li class="active"></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<div class="tab-content-group tab-content-group--sub">
+									<div class="content-item active">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">暈眩靴釘</h3>
+												<p class="mtb0">
+													讓敵人陷入暈眩狀態的專門脛甲  
+												</p>
+												<h4 class="mt05-mb0">無法停止的突擊戰車</h4>
+												<p class="mtb0">
+													菲力帕初次出陣時配備它橫掃敵陣的知名脛甲體格小的人使用也能造成龐大的衝擊
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-sub" src="assets/img/recommend-group-21.png" alt="">
+													<p>※ 推薦組合</p>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-21.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">鐵翼</h3>
+												<p class="mtb0">
+													讓敵人呈現浮空狀態的專門脛甲
+												</p>
+												<h4 class="mt05-mb0">粉碎黑暗的振翅</h4>
+												<p class="mtb0">
+													潘特拉的十二騎士之一鋼鐵心臟羅根愛用的脛甲帶著沉重金屬重量的踢擊輕易就把魔物踢向空中。
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-sub" src="assets/img/recommend-group-22.png" alt="">
+													<p>※ 推薦組合</p>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-22.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">前鋒之盾</h3>
+												<p class="mtb0">
+													防禦成功時會形成保護自己的護盾
+												</p>
+												<h4 class="mt05-mb0">不怕畏懼的先鋒</h4>
+												<p class="mtb0">
+													羅敦之王親自賜予先鋒部隊指揮官的防盾蘊含能有效分散衝擊的羅敦工匠技術的精華
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-sub" src="assets/img/recommend-group-23.png" alt="">
+													<p>※ 推薦組合</p>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-23.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">最後的希望</h3>
+												<p class="mtb0">
+													成功防禦時會治癒自己
+												</p>
+												<h4 class="mt05-mb0">不滅的希望之燈</h4>
+												<p class="mtb0">
+													指揮蘭帕司第4次防禦戰的聖殿騎士鐵壁的帕拉泰昂使用過的防盾蘊含女神之子拉黎卡對於生存
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-sub" src="assets/img/recommend-group-24.png" alt="">
+													<p>※ 推薦組合</p>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-24.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">厄運加農砲</h3>
+												<p class="mtb0">
+													專門讓敵人呈現中毒狀態的手持加農砲
+												</p>
+												<h4 class="mt05-mb0">釋毒惡魔</h4>
+												<p class="mtb0">
+													潘特拉的十二騎士之一魔彈射手基戴亞使用過的手持加農砲利用配合二十四種致命毒融化且
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-sub" src="assets/img/recommend-group-25.png" alt="">
+													<p>※ 推薦組合</p>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-25.png" alt="" class="content-img">
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="content-body">
+											<div class="content-text">
+												<h3 class="mt0-mb05">冰之龍</h3>
+												<p class="mtb0">
+													專門讓敵人呈現緩速狀態的手持加農砲
+												</p>
+												<h4 class="mt05-mb0">冰龍之息</h4>
+												<p class="mtb0">
+													利用在冰山脈地層發掘的冰龍骨頭製成的手持加農砲會發射連火焰都能冰凍的極度寒氣。
+												</p>
+												<div class="recommend-group">
+													<img class="recommend-sub" src="assets/img/recommend-group-26.png" alt="">
+													<p>※ 推薦組合</p>
+												</div>
+											</div>
+											<img src="assets/img/equipment-main-26.png" alt="" class="content-img">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="flex">
+				<ul class="sns flex list-reset">
+					<li><a href="https://www.facebook.com/hundredsoul.tw" target="_blank"><i class="icon icon-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/hundredsoul_tw/" target="_blank"><i class="icon icon-instagram"></i></a></li>
+					<li><a href="https://twitter.com/HundredSoulTW" target="_blank"><i class="icon icon-twitter"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UCJKom9AdipwO58HMVMMrx8w/" target="_blank"><i class="icon icon-youtube"></i></a></li>
+				</ul>
+				<div class="copyright">
+					<p class="mtb0">ⓒ 2019. HOUND 13. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="black"></div>
+	<div class="lightbox lightbox--video">
+		<div class="lightbox__wrap">
+			<i class="icon icon-close function--close"></i>
+			<div class="embed--border">
+				<div class="embed embed--16by9">
+					<iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="https://alvarotrigo.com/fullPage/fullpage.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript">
+		var myFullpage = new fullpage('#fullpage', {
+			anchors: ['header', 'gameMenu', 'monster', 'fellow', 'equipmentMain', 'equipmentSub'],
+			licenseKey: null,
+			verticalCentered: true,
+			menu: '#nav'
+		});
+	</script>
+</body>
+</html>
