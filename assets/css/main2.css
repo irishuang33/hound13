@@ -710,7 +710,6 @@ nav .container .menu li:hover::before {
 
 header {
   position: relative;
-  min-height: 100vh;
   overflow: hidden;
   z-index: 3;
 }
