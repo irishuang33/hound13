@@ -29,9 +29,14 @@ $(function(){
 	$(".btn.hamburgur").on("click", function () {
 		$("nav").addClass("active").slideDown();
 	});
-	$(".btn.close, nav ul li a").on("click", function () {
+	$(".btn.close").on("click", function () {
 		$("nav").removeClass("active").slideUp();
 	});
+	if ( width < 768 ) {
+		$("nav ul li a").on("click", function () {
+			$("nav").removeClass("active").slideUp();
+		});
+	}
 	$(".function--playFullScreen").each(function () {
 		$(this).on("click", function () {
 			$(".black").fadeIn();
