@@ -2025,7 +2025,7 @@ ul.list-reset.app-list li.app-logo img {
 @media (max-width: 1023px) {
   .slider-infinite > .slider-wrap {
     position: relative;
-    top: 5%;
+    top: 2.5%;
     height: 100%;
   }
 }
@@ -3299,7 +3299,7 @@ ul.list-reset.app-list li.app-logo img {
 @media (max-width: 1023px) {
   .tab-group .tab-content-group--sub .content-img {
     width: 65%;
-    margin-bottom: 2.5%;
+    margin-bottom: 5%;
   }
 }
 @media (min-width: 1024px) {
