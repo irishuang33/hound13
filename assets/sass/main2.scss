@@ -849,6 +849,97 @@ footer {
 		}
 	}
 }
+ul.list-reset.app-list {
+	width: 100%;
+	align-items: center;
+	@include breakpoint(1024px) {
+		margin-top: 45px;
+		margin-bottom: 45px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		justify-content: space-between;
+	}
+	@include breakpoint(max-width 1023px) {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0.657em 0;
+		justify-content: center;
+		background-color: $black;
+		z-index: 7;
+	}
+	@include breakpoint(max-width 320px) {
+		padding: 0.5em 0;
+	}
+	li {
+		a {
+			display: block;
+			img {
+				display: block;
+			}
+		}
+		&:not(.app-logo) {
+			@include breakpoint(max-width 1023px) {
+				margin-left: 1em;
+				margin-right: 1em;
+			}
+			img {
+				height: 45px;
+				@include border-radius(10px);
+				@include breakpoint(max-width 375px) {
+					height: 40px;
+				}
+				@include breakpoint(1366px) {
+					height: 60px;
+				}
+				@include breakpoint(1600px) {
+					height: 70px;
+				}
+				@include breakpoint(1920px) {
+					height: 84px;
+				}
+			}
+		}
+		&.app-logo {
+			a {
+				display: block;
+				padding: 5px 14px;
+				border: 1px solid #fff;
+				@include breakpoint(1024px) {
+					padding: 6px 15px;
+				}
+				@include breakpoint(1366px) {
+					padding: 7px 20px;
+				}
+				@include breakpoint(1600px) {
+					padding: 9px 23px;
+				}
+				@include breakpoint(1920px) {
+					padding: 10px 30px;
+				}
+				&:hover {
+					background-color: $black;
+				}
+			}
+			img {
+				height: 22px;
+				@include breakpoint(max-width 375px) {
+					height: 18px;
+				}
+				@include breakpoint(1366px) {
+					height: 29px;
+				}
+				@include breakpoint(1600px) {
+					height: 34px;
+				}
+				@include breakpoint(1920px) {
+					height: 42px;
+				}
+			}
+		}
+	}
+}
 .slider {
 	position: relative;
 	&-mobile {
@@ -871,7 +962,7 @@ footer {
 			height: 94px;
 			@include translateX(-50%);
 		}
-		@include breakpoint(max-width 375px) {
+		@include breakpoint(max-width 414px) {
 			top: 30px;
 			left: calc(50% + 14.5px);
 			height: 85px;
@@ -909,7 +1000,7 @@ footer {
 	.item-container {
 		@include breakpoint(max-width 1023px) {
 			height: 100%;
-			padding-top: 100px;
+			// padding-top: 100px;
 		}
 		@include breakpoint(1024px) {
 			padding-top: 100px;
@@ -942,7 +1033,7 @@ footer {
 			width: 100%;
 			height: 100%;
 			@include breakpoint(max-width 1023px) {
-				top: -60px;
+				// top: -60px;
 			}
 			> .slider-item {
 				position: absolute;
@@ -1074,11 +1165,11 @@ footer {
 					&.slider-img {
 						@include opacity(0);
 						@include breakpoint(max-width 1023px) {
-							width: 135%;
+							width: 125%;
 							margin-bottom: -27.5%;
 						}
 						@include breakpoint(max-width 320px) {
-							width: 130%;
+							width: 100%;
 						}
 						@include breakpoint(1024px) {
 							position: absolute;
@@ -1146,8 +1237,8 @@ footer {
 			bottom: 2px;
 			z-index: 5;
 			@include breakpoint(max-width 1023px) {
-				left: calc(15% - 13.5px);
-				bottom: 32.7%;
+				left: calc(10vw + 17.5px);
+				bottom: 29.7vh;
 			}
 			@include breakpoint(max-width 320px) {
 				left: calc(15% - 12px);
@@ -1229,7 +1320,7 @@ footer {
 		> .slider-wrap {
 			@include breakpoint(max-width 1023px) {
 				position: relative;
-				top: -60px;
+				top: 5%;
 				height: 100%;
 			}
 			&::before, &::after {
@@ -1445,6 +1536,9 @@ footer {
 					// @include opacity(1);
 					z-index: 2;
 				}
+				@include breakpoint(max-width 414px) {
+					padding-top: 90px;
+				}
 				> h3 {
 					position: absolute;
 					top: -15px;
@@ -1457,7 +1551,7 @@ footer {
 					letter-spacing: 0.2em;
 					@include translateX(-50%);
 					@include breakpoint(414px) {
-						top: 15px;
+						top: 85px;
 						font-size: 18px;
 					}
 				}
@@ -1624,6 +1718,8 @@ footer {
 	align-items: center;
 	@include breakpoint(max-width 1023px) {
 		flex-direction: column;
+		padding-top: 60px;
+		padding-bottom: 90px;
 	}
 	@include breakpoint(1024px) {
 		padding-top: 100px;
@@ -1682,7 +1778,7 @@ footer {
 .tab-group {
 	display: flex;
 	@include breakpoint(max-width 1023px) {
-		padding-top: 50px;
+		// padding-top: 50px;
 		height: 100%;
 	}
 	@include breakpoint(max-width 413px) {
@@ -1692,7 +1788,7 @@ footer {
 		font-size: 0;
 		@include breakpoint(max-width 1023px) {
 			position: absolute;
-			top: 80px;
+			top: 140px;
 			width: 100%;
 			padding-left: 6.25%;
 			padding-right: 6.25%;
@@ -2156,7 +2252,7 @@ footer {
 				top: 0;
 				@include breakpoint(max-width 1023px) {
 					width: 65%;
-					margin-bottom: 10%;
+					margin-bottom: 2.5%;
 				}
 				@include breakpoint(1024px) {
 					right: -27px;
