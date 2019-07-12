@@ -20,16 +20,16 @@
 						<img src="assets/img/HS_Logo.png" alt="HOUNDRED SOUL" class="mobile">
 					</a>
 					<ul class="menu list-reset flex">
-						<li><a href="#!">遊戲</a></li>
+						<li><a class="page-scroll" href="#gameMenu">遊戲</a></li>
 						<li><a href="#!">儲值</a></li>
 						<li><a href="#!">客服</a></li>
 						<li><a href="#!">公告</a></li>
 					</ul>
 					<ul class="sns mobile list-reset">
-						<li><a href="#!"><i class="icon icon-facebook"></i>Facebook</a></li>
-						<li><a href="#!"><i class="icon icon-instagram"></i>Instagram</a></li>
-						<li><a href="#!"><i class="icon icon-twitter"></i>Twitter</a></li>
-						<li><a href="#!"><i class="icon icon-youtube"></i>YouTube</a></li>
+						<li><a href="https://www.facebook.com/hundredsoul.tw" target="_blank"><i class="icon icon-facebook"></i>Facebook</a></li>
+						<li><a href="https://www.instagram.com/hundredsoul_tw/" target="_blank"><i class="icon icon-instagram"></i>Instagram</a></li>
+						<li><a href="https://twitter.com/HundredSoulTW" target="_blank"><i class="icon icon-twitter"></i>Twitter</a></li>
+						<li><a href="https://www.youtube.com/channel/UCJKom9AdipwO58HMVMMrx8w/" target="_blank"><i class="icon icon-youtube"></i>YouTube</a></li>
 					</ul>
 					<a href="#!" class="btn btn--90 home desktop"><i class="icon icon-home"></i></a>
 					<a href="#!" class="btn btn--90 close mobile"><i class="icon icon-close"></i></a>
@@ -37,9 +37,9 @@
 			</div>
 		</nav>
 		<header>
-			<video autoplay muted loop>
+			<video autoplay muted loop poster="assets/img/1920x1080.jpg">
 				<source src="assets/img/comp2_9.mp4" type="video/mp4">
-				<!-- Your browser does not support HTML5 video. -->
+				Your browser does not support HTML5 video.
 			</video>
 			<div class="container">
 				<div class="flex">
@@ -107,59 +107,59 @@
 				</ul>
 			</div>
 		</div>
-		<section>
+		<section id="gameMenu">
 			<div class="container-fluid">
 				<div class="slider slider-lr">
 					<ul class="slider-lr-navi list-reset">
 						<li>
 							<ul class="character list-reset">
-								<li class="active">魔物</li>
-								<li>副官</li>
-								<li>武器</li>
+								<li class="page-scroll active">魔物</li>
+								<li class="page-scroll">副官</li>
+								<li class="page-scroll">武器</li>
 							</ul>
 						</li>
-						<li class="eq-main">主武器</li>
-						<li class="eq-sub">輔助武器</li>
+						<li class="eq-main page-scroll">主武器</li>
+						<li class="eq-sub page-scroll">輔助武器</li>
 					</ul>
 					<div class="slider-wrap">
 						<div class="slider-item">
 							<div class="flex card-group desktop">
-								<div class="card-item">
+								<a class="card-item page-scroll" href="#monster">
 									<img class="normal" src="assets/img/monster-normal.png" alt="">
 									<img class="hover" src="assets/img/monster-hover.png" alt="">
 									<span class="sr-only">魔物 Monster</span>
-								</div>
-								<div class="card-item">
+								</a>
+								<a class="card-item page-scroll" href="#fellow">
 									<img class="normal" src="assets/img/fellow-normal.png" alt="">
 									<img class="hover" src="assets/img/fellow-hover.png" alt="">
 									<span class="sr-only">副官 Fellow</span>
-								</div>
-								<div class="card-item">
+								</a>
+								<a class="card-item page-scroll" href="#equipmentMain">
 									<img class="normal" src="assets/img/equipment-normal.png" alt="">
 									<img class="hover" src="assets/img/equipment-hover.png" alt="">
 									<span class="sr-only">武器 equipment</span>
-								</div>
+								</a>
 							</div>
 							<div class="flex card-group mobile">
-								<div class="card-item">
+								<a class="card-item page-scroll" href="#monster">
 									<img class="normal" src="assets/img/monster-mobile.png" alt="">
 									<span class="sr-only">魔物 Monster</span>
-								</div>
-								<div class="card-item">
+								</a>
+								<a class="card-item page-scroll" href="#fellow">
 									<img class="normal" src="assets/img/fellow-mobile.png" alt="">
 									<span class="sr-only">副官 Fellow</span>
-								</div>
-								<div class="card-item">
+								</a>
+								<a class="card-item page-scroll" href="#equipmentMain">
 									<img class="normal" src="assets/img/equipment-main-mobile.png" alt="">
 									<span class="sr-only">主武器 equipment</span>
-								</div>
-								<div class="card-item">
+								</a>
+								<a class="card-item page-scroll" href="#equipmentSub">
 									<img class="normal" src="assets/img/equipment-sub-mobile.png" alt="">
-									<span class="sr-only">輔助武器 equipment</span>
-								</div>
+									<span class="sr-only">輔助武器 equipmentSub</span>
+								</a>
 							</div>
 						</div>
-						<div class="slider-item">
+						<div id="monster" class="slider-item">
 							<img src="assets/img/monster-title.png" alt="魔物" class="item-title">
 							<div class="item-container">
 								<div class="slider slider-fade slider-monster">
@@ -292,7 +292,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="slider-item">
+						<div id="fellow" class="slider-item">
 							<img src="assets/img/fellow-title.png" alt="副官" class="item-title">
 							<div class="item-container">
 								<div class="slider slider-infinite">
@@ -377,10 +377,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="slider-item">
+						<div id="equipmentMain" class="slider-item">
 							<img src="assets/img/equipment-title.png" alt="武器" class="item-title">
 							<div class="item-container">
-								<div class="slider slider-fade slider-equipment">
+								<div class="slider slider-equipment">
 									<div class="slider-wrap">
 										<div class="slider-item active">
 											<h3 class="mobile">主武器</h3>
@@ -409,7 +409,7 @@
 																</p>
 																<div class="recommend-group">
 																	<img class="recommend-main" src="assets/img/recommend-group-11.png" alt="">
-																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
+																	<div class="video-group function--playFullScreen" data-video="kIsNQ-Lx2Ng">
 																		<img src="assets/img/imgMovie01.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
 																	</div>
@@ -430,7 +430,7 @@
 																</p>
 																<div class="recommend-group">
 																	<img class="recommend-main" src="assets/img/recommend-group-12.png" alt="">
-																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
+																	<div class="video-group function--playFullScreen" data-video="6Gt11LKNXTY">
 																		<img src="assets/img/imgMovie02.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
 																	</div>
@@ -451,7 +451,7 @@
 																</p>
 																<div class="recommend-group">
 																	<img class="recommend-main" src="assets/img/recommend-group-13.png" alt="">
-																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
+																	<div class="video-group function--playFullScreen" data-video="BIBK9eVVY2A">
 																		<img src="assets/img/imgMovie03.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
 																	</div>
@@ -472,7 +472,7 @@
 																</p>
 																<div class="recommend-group">
 																	<img class="recommend-main" src="assets/img/recommend-group-14.png" alt="">
-																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
+																	<div class="video-group function--playFullScreen" data-video="pWNz-V4OmVE">
 																		<img src="assets/img/imgMovie04.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
 																	</div>
@@ -493,7 +493,7 @@
 																</p>
 																<div class="recommend-group">
 																	<img class="recommend-main" src="assets/img/recommend-group-15.png" alt="">
-																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
+																	<div class="video-group function--playFullScreen" data-video="PIp_ZPu864g">
 																		<img src="assets/img/imgMovie05.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
 																	</div>
@@ -517,7 +517,7 @@
 																</p>
 																<div class="recommend-group">
 																	<img class="recommend-main" src="assets/img/recommend-group-16.png" alt="">
-																	<div class="video-group function--playFullScreen" data-video="xaW5r2ar3AQ">
+																	<div class="video-group function--playFullScreen" data-video="JJlG86uTgNA">
 																		<img src="assets/img/imgMovie06.png" alt="" class="video-thumbnail">
 																		<i class="icon icon-play"></i>
 																	</div>
@@ -529,7 +529,16 @@
 												</div>
 											</div>
 										</div>
-										<div class="slider-item">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="equipmentSub" class="slider-item">
+							<img src="assets/img/equipment-title.png" alt="武器" class="item-title">
+							<div class="item-container">
+								<div class="slider slider-equipment">
+									<div class="slider-wrap">
+										<div class="slider-item active">
 											<h3 class="mobile">輔助武器</h3>
 											<div class="tab-group">
 												<ul class="tab-navi tab-navi--sub list-reset">
@@ -670,10 +679,10 @@
 			<div class="container">
 				<div class="flex">
 					<ul class="sns flex list-reset">
-						<li><a href="#!"><i class="icon icon-facebook"></i></a></li>
-						<li><a href="#!"><i class="icon icon-instagram"></i></a></li>
-						<li><a href="#!"><i class="icon icon-twitter"></i></a></li>
-						<li><a href="#!"><i class="icon icon-youtube"></i></a></li>
+						<li><a href="https://www.facebook.com/hundredsoul.tw" target="_blank"><i class="icon icon-facebook"></i></a></li>
+						<li><a href="https://www.instagram.com/hundredsoul_tw/" target="_blank"><i class="icon icon-instagram"></i></a></li>
+						<li><a href="https://twitter.com/HundredSoulTW" target="_blank"><i class="icon icon-twitter"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCJKom9AdipwO58HMVMMrx8w/" target="_blank"><i class="icon icon-youtube"></i></a></li>
 					</ul>
 					<div class="copyright">
 						<p class="mtb0">ⓒ 2019. HOUND 13. All Rights Reserved.</p>
@@ -681,7 +690,19 @@
 				</div>
 			</div>
 		</footer>
+		<div class="black"></div>
+		<div class="lightbox lightbox--video">
+			<div class="lightbox__wrap">
+				<i class="icon icon-close function--close"></i>
+				<div class="embed--border">
+					<div class="embed embed--16by9">
+						<iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
 		<script type="text/javascript" src="assets/js/main.js"></script>
 	</body>
 </html>

@@ -798,7 +798,7 @@ footer {
 	width: 100%;
 	bottom: 50px;
 	left: 0;
-	z-index: 2;
+	z-index: 4;
 	@include breakpoint(max-width 1023px) {
 		display: none;
 		position: relative;
@@ -863,23 +863,20 @@ footer {
 		}
 	}
 	&-lr {
-		min-height: 100%;
-		height: 100%;
+		height: 100vh;
 		background-image: url("../img/bgMedia.png");
 		background-position: center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		@include background-size(cover);
-		overflow: hidden;
+		// overflow: hidden;
 		> .slider-wrap {
 			position: relative;
-			min-height: 100%;
-			height: 100%;
+			height: 100vh;
 			> .slider-item {
-				float: left;
+				// float: left;
 				position: relative;
-				min-height: 100%;
-				height: 100%;
+				height: 100vh;
 				overflow: hidden;
 				@include breakpoint(1024px) {
 					padding-top: 48px;
@@ -1592,16 +1589,16 @@ footer {
 		> .slider-wrap {
 			position: relative;
 			> .slider-item {
-				position: absolute;
-				top: 50%;
-				left: 50%;
+				// position: absolute;
+				// top: 50%;
+				// left: 50%;
 				width: 100%;
 				height: 100%;
-				@include opacity(0);
-				@include translate(-50%, -50%);
+				// @include opacity(0);
+				// @include translate(-50%, -50%);
 				@include transition(all 0.3s);
 				&.active {
-					@include opacity(1);
+					// @include opacity(1);
 					z-index: 2;
 				}
 				> h3 {
@@ -1769,6 +1766,7 @@ footer {
 	}
 	.card-item {
 		position: relative;
+		display: block;
 		@include breakpoint(max-width 1023px) {
 			margin-left: 10%;
 			margin-right: 10%;
