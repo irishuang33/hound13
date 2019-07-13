@@ -1138,6 +1138,7 @@ ul.list-reset.app-list {
 				@include transition(all 0.3s);
 				@include breakpoint(max-width 1023px) {
 					flex-direction: column;
+					overflow: hidden;
 				}
 				.slider-body {
 					position: relative;
@@ -1668,9 +1669,6 @@ ul.list-reset.app-list {
 		position: relative;
 		display: table;
 		margin: auto;
-		@include breakpoint(max-width 1023px) {
-			display: none;
-		}
 		@include breakpoint(1024px) {
 			padding-right: 31px;
 		}
@@ -1934,6 +1932,9 @@ ul.list-reset.app-list {
 		position: absolute;
 		right: 0;
 		cursor: pointer;
+		@include breakpoint(max-width 1023px) {
+			display: none;
+		}
 		@include breakpoint(1024px) {
 			top: 59px;
 		}
@@ -2917,6 +2918,17 @@ body {
 						width: 5px;
 					}
 				}
+			}
+		}
+	}
+}
+.storage.fp-section {
+	@include breakpoint(max-width 1023px) {
+		height: auto !important;
+		.fp-tableCell {
+			height: auto !important;
+			.storage__content {
+				width: 100%;
 			}
 		}
 	}

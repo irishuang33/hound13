@@ -703,10 +703,10 @@
 	<script type="text/javascript" src="assets/js/swiper.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
 	<script type="text/javascript">
-		$(".storage.mobile").remove();
 		$(document).ready(function() {
 			var width = $(window).width();
 			if (width >= 1024) {
+				$(".storage.mobile").remove();
 				$('#fullpage').fullpage({
 					anchors: ['header', 'gameMenu', 'monster', 'fellow', 'equipmentMain', 'equipmentSub'],
 					verticalCentered: true,
