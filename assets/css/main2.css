@@ -812,6 +812,8 @@ header .slider__image {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  left: 100%;
   z-index: 1;
 }
 header .slider__image li {
@@ -833,32 +835,8 @@ header .slider__image li.active {
 }
 header .slider__image li img {
   display: block;
-  width: 150px;
-}
-@media (min-width: 414px) {
-  header .slider__image li img {
-    width: 215px;
-  }
-}
-@media (min-width: 1024px) {
-  header .slider__image li img {
-    width: 242px;
-  }
-}
-@media (min-width: 1366px) {
-  header .slider__image li img {
-    width: 323px;
-  }
-}
-@media (min-width: 1600px) {
-  header .slider__image li img {
-    width: 378px;
-  }
-}
-@media (min-width: 1920px) {
-  header .slider__image li img {
-    width: 454px;
-  }
+  width: 100%;
+  left: 100%;
 }
 header .slider__mask {
   position: absolute;
