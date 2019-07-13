@@ -199,7 +199,7 @@ $(function(){
 			speed: 500,
 			cssWidthAndHeight: true,
 			slidesPerView: 5,
-			spaceBetween: 20,
+			spaceBetween: 0,
 			slidesPerView: 'auto',
 			autoResize: false,
 			loop: true,

@@ -422,6 +422,8 @@ header {
 				position: absolute;
 				top: 0;
 				left: 0;
+				width: 100%;
+				height: 100%;
 				@include transition(all 0.3s);
 				@include opacity(0);
 				&.active {
@@ -830,24 +832,45 @@ section {
 	}
 }
 footer {
-	position: fixed;
 	width: 100%;
-	bottom: 50px;
-	left: 0;
 	z-index: 4;
+	@include breakpoint(1024px) {
+		position: fixed;
+		bottom: 50px;
+		left: 0;
+	}
 	@include breakpoint(max-width 1023px) {
-		display: none;
 		position: relative;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		margin-bottom: 66px;
+		background-color: $black;
+	}
+	@include breakpoint(max-width 375px) {
+		margin-bottom: 60px;
+	}
+	@include breakpoint(max-width 320px) {
+		margin-bottom: 55px;
 	}
 	a {
 		display: block;
 		color: #879596;
 	}
 	.container {
+		@include breakpoint(max-width 1023px) {
+			padding: 0;
+		}
 		> .flex {
-			justify-content: space-between;
+			@include breakpoint(max-width 1023px) {
+				align-items: center;
+				justify-content: center;
+			}
+			@include breakpoint(1024px) {
+				justify-content: space-between;
+			}
 			p {
 				color: #879596;
+				font-size: 12px;
 				@include breakpoint(1024px) {
 					font-size: 8px;
 				}
@@ -878,6 +901,38 @@ footer {
 					}
 					&:hover {
 						color: $primary;
+					}
+				}
+			}
+		}
+		.copyright {
+			display: flex;
+			@include breakpoint(1024px) {
+				align-items: flex-end;
+			}
+			@include breakpoint(max-width 1023px) {
+				align-items: center;
+				flex-direction: column;
+			}
+			img {
+				&.alert {
+					@include breakpoint(1024px) {
+						margin-left: 1em;
+						width: 42px;
+					}
+					@include breakpoint(max-width 1023px) {
+						width: 30px;
+						margin-top: 1em;
+					}
+					@include breakpoint(max-width 375px) {
+						margin-top: 0.5em;
+					}
+				}
+				&.mobile {
+					width: 140px;
+					margin-bottom: 1em;
+					@include breakpoint(max-width 375px) {
+						margin-bottom: 0.5em;
 					}
 				}
 			}
@@ -1609,13 +1664,30 @@ ul.list-reset.app-list {
 			}
 		}
 	}
+	&-group {
+		position: relative;
+		display: table;
+		margin: auto;
+		@include breakpoint(max-width 1023px) {
+			display: none;
+		}
+		@include breakpoint(1024px) {
+			padding-right: 31px;
+		}
+		@include breakpoint(1600px) {
+			padding-right: 47px;
+		}
+		@include breakpoint(1920px) {
+			padding-right: 55px;
+		}
+	}
 	&-fellow {
 		position: relative;
 		margin-left: auto;
 		margin-right: auto;
 		overflow: hidden;
 		@include breakpoint(1024px) {
-			width: 700px;
+			width: 698px;
 			height: 363px;
 		}
 		@include breakpoint(1366px) {
@@ -1623,29 +1695,23 @@ ul.list-reset.app-list {
 			height: 484px;
 		}
 		@include breakpoint(1600px) {
-			width: 1135px;
+			width: 1033px;
 			height: 567px;
 		}
 		@include breakpoint(1920px) {
-			width: 1268px;
+			width: 1218px;
 			height: 680px;
 		}
 		&.slideBox {
 			@include breakpoint(max-width 1023px) {
 				width: 100%;
-				height: 100%;
 			}
-			@include breakpoint(1024px) {
-				top: -30px;
-			}
-			@include breakpoint(1366px) {
-				top: -40px;
-			}
-			@include breakpoint(1600px) {
-				top: -46px;
-			}
-			@include breakpoint(1920px) {
-				top: -55px;
+		}
+		.item-container {
+			@include breakpoint(max-width 1023px) {
+				display: flex;
+				align-items: center;
+				padding-bottom: 70px;
 			}
 		}
 		.inner {
@@ -1655,8 +1721,20 @@ ul.list-reset.app-list {
 				position: absolute;
 				top: 0;
 				left: 50%;
-				width: 3000px;
-				margin-left: -1500px;
+				width: 2094px;
+				margin-left: -1047px;
+			}
+			@include breakpoint(1366px) {
+				width: 2682px;
+				margin-left: -1341px;
+			}
+			@include breakpoint(1600px) {
+				width: 3099px;
+				margin-left: -1550px;
+			}
+			@include breakpoint(1920px) {
+				width: 3657px;
+				margin-left: -1827px;
 			}
 		}
 		.swiper-container {
@@ -1665,21 +1743,27 @@ ul.list-reset.app-list {
 		}
 		.swiper-slide {
 			text-align: center;
+			padding-left: 10px;
+			padding-right: 10px;
 			@include breakpoint(1024px) {
-				width: 107px;
-				padding: 59px 0;
+				width: 127px;
+				padding-top: 59px;
+				padding-bottom: 59px;
 			}
 			@include breakpoint(1366px) {
-				width: 142px;
-				padding: 78px 0;
+				width: 162px;
+				padding-top: 78px;
+				padding-bottom: 78px;
 			}
 			@include breakpoint(1600px) {
-				width: 167px;
-				padding: 92px 0;
+				width: 187px;
+				padding-top: 92px;
+				padding-bottom: 92px;
 			}
 			@include breakpoint(1920px) {
-				width: 200px;
-				padding: 110px 0;
+				width: 220px;
+				padding-top: 110px;
+				padding-bottom: 110px;
 			}
 		}
 		.swiper-slide .item {
@@ -1724,8 +1808,13 @@ ul.list-reset.app-list {
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					width: 100%;
+					width: 95%;
 					@include translate(-50%, -50%);
+				}
+			}
+			img {
+				@include breakpoint(max-width 1023px) {
+					width: 100%;
 				}
 			}
 			@include breakpoint(1024px) {
@@ -1754,35 +1843,37 @@ ul.list-reset.app-list {
 			transition: .4s all;
 			z-index: 11;
 		}
-		.swiper-slide.no1 .item {
-			background-image: url('../img/adCha01.png');
-		}
-		.swiper-slide.no2 .item {
-			background-image: url('../img/adCha02.png');
-		}
-		.swiper-slide.no3 .item {
-			background-image: url('../img/adCha03.png');
-		}
-		.swiper-slide.no4 .item {
-			background-image: url('../img/adCha04.png');
-		}
-		.swiper-slide.no5 .item {
-			background-image: url('../img/adCha05.png');
-		}
-		.swiper-slide.no1 .item:hover {
-			background-image: url('../img/adCha01_on.png');
-		}
-		.swiper-slide.no2 .item:hover {
-			background-image: url('../img/adCha02_on.png');
-		}
-		.swiper-slide.no3 .item:hover {
-			background-image: url('../img/adCha03_on.png');
-		}
-		.swiper-slide.no4 .item:hover {
-			background-image: url('../img/adCha04_on.png');
-		}
-		.swiper-slide.no5 .item:hover {
-			background-image: url('../img/adCha05_on.png');
+		@include breakpoint(1024px) {
+			.swiper-slide.no1 .item {
+				background-image: url('../img/adCha01.png');
+			}
+			.swiper-slide.no2 .item {
+				background-image: url('../img/adCha02.png');
+			}
+			.swiper-slide.no3 .item {
+				background-image: url('../img/adCha03.png');
+			}
+			.swiper-slide.no4 .item {
+				background-image: url('../img/adCha04.png');
+			}
+			.swiper-slide.no5 .item {
+				background-image: url('../img/adCha05.png');
+			}
+			.swiper-slide.no1 .item:hover {
+				background-image: url('../img/adCha01_on.png');
+			}
+			.swiper-slide.no2 .item:hover {
+				background-image: url('../img/adCha02_on.png');
+			}
+			.swiper-slide.no3 .item:hover {
+				background-image: url('../img/adCha03_on.png');
+			}
+			.swiper-slide.no4 .item:hover {
+				background-image: url('../img/adCha04_on.png');
+			}
+			.swiper-slide.no5 .item:hover {
+				background-image: url('../img/adCha05_on.png');
+			}
 		}
 		.img {
 			text-align: center;
@@ -1841,10 +1932,20 @@ ul.list-reset.app-list {
 	}
 	&-hide {
 		position: absolute;
-		top: 50%;
 		right: 0;
-		@include translateY(-50%);
 		cursor: pointer;
+		@include breakpoint(1024px) {
+			top: 59px;
+		}
+		@include breakpoint(1366px) {
+			top: 78px;
+		}
+		@include breakpoint(1600px) {
+			top: 92px;
+		}
+		@include breakpoint(1920px) {
+			top: 110px;
+		}
 		.slider {
 			&-arrow {
 				display: flex;
@@ -1855,17 +1956,17 @@ ul.list-reset.app-list {
 				background-color: #4b4e5a;
 				@include breakpoint(1024px) {
 					width: 27px;
-					height: 215px;
+					height: 235px;
 					font-size: 24px;
 				}
 				@include breakpoint(1366px) {
 					width: 36px;
-					height: 302px;
+					height: 313px;
 					font-size: 32px;
 				}
 				@include breakpoint(1600px) {
 					width: 42px;
-					height: 360px;
+					height: 367px;
 					font-size: 38px;
 				}
 				@include breakpoint(1920px) {
@@ -1884,16 +1985,16 @@ ul.list-reset.app-list {
 				@include transition(all 0.3s);
 				img {
 					@include breakpoint(1024px) {
-						width: 140px;
+						width: 153px;
 					}
 					@include breakpoint(1366px) {
-						width: 196px;
+						width: 203.5px;
 					}
 					@include breakpoint(1600px) {
-						width: 234px;
+						width: 239px;
 					}
 					@include breakpoint(1920px) {
-						width: 285px;
+						width: 286px;
 					}
 				}
 			}
@@ -1902,17 +2003,131 @@ ul.list-reset.app-list {
 			.slider {
 				&-item {
 					@include breakpoint(1024px) {
-						width: 140px;
+						width: 153px;
 					}
 					@include breakpoint(1366px) {
-						width: 196px;
+						width: 203.5px;
 					}
 					@include breakpoint(1600px) {
-						width: 234px;
+						width: 239px;
 					}
 					@include breakpoint(1920px) {
 						width: 285px;
 					}
+				}
+			}
+		}
+	}
+	&-lr-navi {
+		display: none;
+		position: absolute;
+		top: 50%;
+		line-height: 1.25;
+		z-index: 1;
+		@include translateY(-50%);
+		@include breakpoint(1024px) {
+			left: 101px;
+		}
+		@include breakpoint(1366px) {
+			left: 135px;
+		}
+		@include breakpoint(1600px) {
+			left: 158px;
+		}
+		@include breakpoint(1920px) {
+			left: 190px;
+		}
+		li {
+			position: relative;
+			cursor: pointer;
+			@include breakpoint(1024px) {
+				font-size: 10px;
+			}
+			@include breakpoint(1366px) {
+				font-size: 13px;
+			}
+			@include breakpoint(1600px) {
+				font-size: 15px;
+			}
+			@include breakpoint(1920px) {
+				font-size: 18px;
+			}
+			a {
+				color: #727378;
+			}
+			&.active {
+				a {
+					color: #fff;
+				}
+			}
+			&.first {
+				border-left: 1px solid #fff;
+				@include breakpoint(1024px) {
+					padding-top: 4px;
+					padding-bottom: 4px;
+					padding-left: 11px;
+					font-size: 13px;
+				}
+				@include breakpoint(1366px) {
+					padding-top: 5px;
+					padding-bottom: 5px;
+					padding-left: 14px;
+					font-size: 17px;
+				}
+				@include breakpoint(1600px) {
+					padding-top: 6px;
+					padding-bottom: 6px;
+					padding-left: 17px;
+					font-size: 20px;
+				}
+				@include breakpoint(1920px) {
+					padding-top: 7px;
+					padding-bottom: 7px;
+					padding-left: 20px;
+					font-size: 24px;
+				}
+				&::before {
+					@extend %before-after;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 0;
+					height: 100%;
+					background-color: #fff;
+				}
+				&.active {
+					&::before {
+						@include breakpoint(1024px) {
+							width: 2px;
+						}
+						@include breakpoint(1366px) {
+							width: 3px;
+						}
+						@include breakpoint(1600px) {
+							width: 4px;
+						}
+						@include breakpoint(1920px) {
+							width: 5px;
+						}
+					}
+				}
+			}
+			&.second {
+				@include breakpoint(1024px) {
+					margin-top: 7px;
+					padding-left: 14px;
+				}
+				@include breakpoint(1366px) {
+					margin-top: 9px;
+					padding-left: 18px;
+				}
+				@include breakpoint(1600px) {
+					margin-top: 11px;
+					padding-left: 22px;
+				}
+				@include breakpoint(1920px) {
+					margin-top: 14px;
+					padding-left: 26px;
 				}
 			}
 		}
@@ -2592,6 +2807,114 @@ ul.list-reset.app-list {
 					}
 					@include breakpoint(max-width 374px) {
 						width: 110px;
+					}
+				}
+			}
+		}
+	}
+}
+body {
+	&.fp-viewing-header {
+		.slider-lr-navi {
+			display: none;
+		}
+	}
+	&.fp-viewing-gameMenu {
+		.slider-lr-navi {
+			display: none;
+		}
+	}
+	&.fp-viewing-monster {
+		.slider-lr-navi {
+			display: block;
+			li:nth-child(1) {
+				a {
+					color: #fff;
+				}
+				&::before {
+					@include breakpoint(1024px) {
+						width: 2px;
+					}
+					@include breakpoint(1366px) {
+						width: 3px;
+					}
+					@include breakpoint(1600px) {
+						width: 4px;
+					}
+					@include breakpoint(1920px) {
+						width: 5px;
+					}
+				}
+			}
+		}
+	}
+	&.fp-viewing-fellow {
+		.slider-lr-navi {
+			display: block;
+			li:nth-child(2) {
+				a {
+					color: #fff;
+				}
+				&::before {
+					@include breakpoint(1024px) {
+						width: 2px;
+					}
+					@include breakpoint(1366px) {
+						width: 3px;
+					}
+					@include breakpoint(1600px) {
+						width: 4px;
+					}
+					@include breakpoint(1920px) {
+						width: 5px;
+					}
+				}
+			}
+		}
+	}
+	&.fp-viewing-equipmentMain {
+		.slider-lr-navi {
+			display: block;
+			li:nth-child(3), li:nth-child(4) {
+				a {
+					color: #fff;
+				}
+				&::before {
+					@include breakpoint(1024px) {
+						width: 2px;
+					}
+					@include breakpoint(1366px) {
+						width: 3px;
+					}
+					@include breakpoint(1600px) {
+						width: 4px;
+					}
+					@include breakpoint(1920px) {
+						width: 5px;
+					}
+				}
+			}
+		}
+	}
+	&.fp-viewing-equipmentSub {
+		.slider-lr-navi {
+			display: block;
+			li:nth-child(3), li:nth-child(5) {
+				a {
+					color: #fff;
+				}
+				&::before {
+					@include breakpoint(1024px) {
+						width: 2px;
+					}
+					@include breakpoint(1366px) {
+						width: 3px;
+					}
+					@include breakpoint(1600px) {
+						width: 4px;
+					}
+					@include breakpoint(1920px) {
+						width: 5px;
 					}
 				}
 			}
