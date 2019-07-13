@@ -395,13 +395,37 @@ header {
 			margin-left: -40px;
 			@include translateY(-32.5%);
 		}
+		> img {
+			width: 150px;
+			@include breakpoint(414px) {
+				width: 215px;
+			}
+			@include breakpoint(1024px) {
+				width: 242px;
+			}
+			@include breakpoint(1366px) {
+				width: 323px;
+			}
+			@include breakpoint(1600px) {
+				width: 378px;
+			}
+			@include breakpoint(1920px) {
+				width: 454px;
+			}
+		}
 		&__image {
-			position: relative;
+			position: absolute;
+			top: 0;
+			left: 0;
 			z-index: 1;
 			li {
-				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include transition(all 0.3s);
+				@include opacity(0);
 				&.active {
-					display: block;
+					@include opacity(1);
 				}
 				img {
 					display: block;
@@ -460,9 +484,9 @@ header {
 			}
 		}
 		&__text {
+			position: relative;
 			min-height: 2em;
 			li {
-				display: none;
 				color: transparent !important;
 				font-size: 16px;
 				font-weight: 600;
@@ -472,6 +496,8 @@ header {
 				@include background-image(linear-gradient(top, #36b1c0 0%,#ffffff 100%));
 				@include background-clip(text);
 				@include background-size(cover);
+				@include transition(all 0.3s);
+				@include opacity(0);
 				@include breakpoint(414px) {
 					font-size: 18px;
 				}
@@ -499,8 +525,14 @@ header {
 						font-size: 64px;
 					}
 				}
+				&:not(:first-child) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+				}
 				&.active {
-					display: block;
+					@include opacity(1);
 				}
 			}
 		}
@@ -971,7 +1003,7 @@ ul.list-reset.app-list {
 			height: 85px;
 		}
 		@include breakpoint(max-width 320px) {
-			top: 40px;
+			top: 20px;
 			left: calc(50% + 12.5px);
 			height: 73px;
 		}
@@ -1169,10 +1201,11 @@ ul.list-reset.app-list {
 						@include opacity(0);
 						@include breakpoint(max-width 1023px) {
 							width: 125%;
-							margin-bottom: -27.5%;
+							margin-bottom: -25%;
 						}
 						@include breakpoint(max-width 320px) {
-							width: 100%;
+							width: 120%;
+							margin-bottom: -22.5%;
 						}
 						@include breakpoint(1024px) {
 							position: absolute;
@@ -1237,17 +1270,21 @@ ul.list-reset.app-list {
 		}
 		.slider-navi {
 			position: absolute;
-			bottom: 2px;
 			z-index: 5;
 			@include breakpoint(max-width 1023px) {
+				top: 54.7%;
 				left: calc(10vw + 17.5px);
-				bottom: 29.7vh;
+			}
+			@include breakpoint(max-width 375px) {
+				top: 53.85%;
+				left: 51px;
 			}
 			@include breakpoint(max-width 320px) {
-				left: calc(15% - 12px);
-				bottom: 35.2%;
+				top: 50.3%;
+				left: 44px;
 			}
 			@include breakpoint(1024px) {
+				bottom: 2px;
 				right: 246px;
 			}
 			@include breakpoint(1366px) {
@@ -1325,6 +1362,12 @@ ul.list-reset.app-list {
 				position: relative;
 				height: 100%;
 			}
+			@include breakpoint(max-width 375px) {
+				top: -20px;
+			}
+			@include breakpoint(max-width 320px) {
+				top: 0px;
+			}
 			&::before, &::after {
 				display: table;
 				content: '';
@@ -1340,6 +1383,9 @@ ul.list-reset.app-list {
 					width: 100%;
 					height: 100%;
 					@include translate(-50%, -50%);
+				}
+				@include breakpoint(max-width 320px) {
+					width: 90%;
 				}
 				@include breakpoint(1024px) {
 					float: left;
@@ -1457,10 +1503,10 @@ ul.list-reset.app-list {
 				bottom: 120px;
 			}
 			@include breakpoint(max-width 375px) {
-				bottom: 100px;
+				bottom: 130px;
 			}
 			@include breakpoint(max-width 320px) {
-				bottom: 90px;
+				bottom: 110px;
 			}
 			@include breakpoint(1024px) {
 				bottom: 0;
@@ -1543,15 +1589,18 @@ ul.list-reset.app-list {
 				}
 				> h3 {
 					position: absolute;
-					top: -15px;
+					top: 85px;
 					left: 50%;
 					margin: 0;
 					padding-left: 0.2em;
 					color: #fff;
-					font-size: 16px;
+					font-size: 14px;
 					font-weight: 300;
 					letter-spacing: 0.2em;
 					@include translateX(-50%);
+					@include breakpoint(375px) {
+					font-size: 16px;
+					}
 					@include breakpoint(414px) {
 						top: 85px;
 						font-size: 18px;
@@ -1712,19 +1761,27 @@ ul.list-reset.app-list {
 }
 .animation {
 	position: fixed;
+	display: block;
 	left: 50%;
-	bottom: 75px;
+	bottom: 60px;
+	margin-top: 0;
 	color: #fff;
 	font-size: 0.5em;
 	@include translateX(-50%);
-	@include animation(animate-tb 1s forwards infinite alternate);
+	@include breakpoint(375px) {
+		bottom: 75px;
+	}
+	i {
+		position: relative;
+		@include animation(animate-tb 1s forwards infinite alternate);
+	}
 }
 @include keyframes(animate-tb) {
 	0% {
-		bottom: 75px;
+		top: 0;
 	}
 	100% {
-		bottom: 85px;
+		top: -10px;
 	}
 }
 .card-group {
@@ -1817,11 +1874,11 @@ ul.list-reset.app-list {
 			z-index: 3;
 		}
 		@include breakpoint(max-width 413px) {
-			top: 70px;
+			top: 150px;
 			grid-gap: 0 calc(100% - 90px);
 		}
 		@include breakpoint(max-width 374px) {
-			top: 75px;
+			top: 115px;
 		}
 		@include breakpoint(1024px) {
 			width: 27px;
@@ -1829,17 +1886,17 @@ ul.list-reset.app-list {
 			margin-right: 63px;
 		}
 		@include breakpoint(1366px) {
-			width: 130px;
+			width: 250px;
 			padding-top: 71px;
 			margin-right: 85px;
 		}
 		@include breakpoint(1600px) {
-			width: 174px;
+			width: 295px;
 			padding-top: 83px;
 			margin-right: 89px;
 		}
 		@include breakpoint(1920px) {
-			width: 231px;
+			width: 355px;
 			padding-top: 100px;
 			margin-right: 119px;
 		}
@@ -2230,6 +2287,9 @@ ul.list-reset.app-list {
 				@include breakpoint(max-width 1023px) {
 					width: 55%;
 				}
+				@include breakpoint(max-width 374px) {
+					width: 45%;
+				}
 				@include breakpoint(1024px) {
 					top: -64px;
 					right: -16px;
@@ -2271,7 +2331,9 @@ ul.list-reset.app-list {
 				top: 0;
 				@include breakpoint(max-width 1023px) {
 					width: 65%;
-					margin-bottom: 5%;
+				}
+				@include breakpoint(max-width 374px) {
+					width: 60%;
 				}
 				@include breakpoint(1024px) {
 					right: -27px;
@@ -2331,7 +2393,7 @@ ul.list-reset.app-list {
 			right: -74px;
 			font-size: 54px;
 		}
-		@include breakpoint(max-width 1023px) {
+		@include breakpoint(max-width 1599px) {
 			bottom: 100%;
 			right: 0;
 			margin-bottom: 10px;
@@ -2347,6 +2409,9 @@ ul.list-reset.app-list {
 		position: relative;
 		width: 90vw;
 		@include breakpoint(1024px) {
+			width: 75vw;
+		}
+		@include breakpoint(1600px) {
 			width: 1280px;
 		}
 	}

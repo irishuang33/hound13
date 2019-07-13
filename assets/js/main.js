@@ -58,7 +58,34 @@ $(function(){
 	$(".storage__open").on("click", function () {
 		$(this).parent().toggleClass("active");
 	});
-	// $(".slider__image").
+	$(".slider__image").each(function () {
+		var slider_count = $(".slider__image").children("li").length,
+			slider_item_index = 0; //預宣告slide為0
+		function fade() {
+			$(".slider__image").children(".active").removeClass("active");
+			$(".slider__image").children("li").eq(slider_item_index).addClass("active");
+		}
+		function text() {
+			$(".slider__text").children(".active").removeClass("active");
+			$(".slider__text").children("li").eq(slider_item_index).addClass("active");
+		}
+		function switch_next() {
+			if (slider_item_index != 0) {
+				slider_item_index--;
+			} else {
+				slider_item_index = slider_count - 1;
+			}
+			fade();
+			text();
+			return false;
+		}
+		var sid = setInterval(switch_next, 2000);
+		$(this).hover(function() {
+			clearInterval(sid);
+		},function() {
+			sid = setInterval(switch_next, 2000);
+		});
+	});
 	// slides
 	$(".slider").each(function () {
 		var $slider = $(this),
