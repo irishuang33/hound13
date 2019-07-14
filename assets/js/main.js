@@ -21,6 +21,19 @@ $(function(){
 	} else {
 		$("header > video").attr("poster", "assets/img/750x1334.jpg");
 	}
+	var iPhone = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null);
+	var android = (navigator.userAgent.match(/android/i) != null);
+	var iPad = navigator.userAgent.match(/iPad/i) != null;
+	if (android) {
+		iPad = false;
+		iPhone = false;
+		var video = document.querySelector("video");
+		$("video").load();
+		window.addEventListener('touchstart', function videoStart() {
+			video.play();
+			this.removeEventListener('touchstart', videoStart);
+		});
+	}
 	if ( (height / width) < 0.5625 ) {
 		$("video").addClass("w-100");
 	} else {

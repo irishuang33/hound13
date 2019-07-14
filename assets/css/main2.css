@@ -531,8 +531,8 @@ nav a {
   nav a.logo {
     margin-left: -15vw;
     margin-right: -15vw;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
     padding-bottom: 10px;
     border-bottom: 1px solid #515264;
   }
@@ -3080,16 +3080,16 @@ ul.list-reset.app-list li.app-logo img {
   background-size: cover;
 }
 .slider-bg.slider-game-menu {
-  background-image: url("../img/bgMedia.png");
+  background-image: url("../img/fellowBg.png");
 }
 .slider-bg.slider-monster {
-  background-image: url("../img/bgAd.png");
+  background-image: url("../img/monsterBg.png");
 }
 .slider-bg.slider-fellow {
-  background-image: url("../img/bgAd.png");
+  background-image: url("../img/fellowBg.png");
 }
 .slider-bg.slider-equipment {
-  background-image: url("../img/bgAd.png");
+  background-image: url("../img/equipmentBg.png");
 }
 
 @-moz-keyframes fadeLeftIn {
@@ -4189,10 +4189,12 @@ body.fp-viewing-equipmentSub .slider-lr-navi li:nth-child(3) a, body.fp-viewing-
   color: #879596;
   cursor: pointer;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1600px) {
   .lightbox .icon {
     top: 0;
     right: -74px;
+    width: 54px;
+    height: 54px;
     font-size: 54px;
   }
 }
@@ -4201,6 +4203,8 @@ body.fp-viewing-equipmentSub .slider-lr-navi li:nth-child(3) a, body.fp-viewing-
     bottom: 100%;
     right: 0;
     margin-bottom: 10px;
+    width: 28px;
+    height: 28px;
     font-size: 28px;
   }
 }
