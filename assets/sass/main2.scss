@@ -854,6 +854,7 @@ footer {
 				justify-content: center;
 			}
 			@include breakpoint(1024px) {
+				align-items: baseline;
 				justify-content: space-between;
 			}
 			p {
@@ -2203,6 +2204,9 @@ ul.list-reset.app-list {
 	@include translateX(-50%);
 	@include breakpoint(375px) {
 		bottom: 75px;
+	}
+	@include breakpoint(1024px) {
+		bottom: 50px;
 	}
 	i {
 		position: relative;
